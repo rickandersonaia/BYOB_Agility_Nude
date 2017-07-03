@@ -1,0 +1,21 @@
+
+/* 
+    Created on : Nov 22, 2016
+    Author     : Rick
+*/
+#t_canvas .scheme_colors{float:left;}
+#t_canvas .option_item.option_custom:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.t_skin_options{position:relative;}
+#t_admin #t_canvas .t_skin_options.color .t_save{position:absolute;top:0;right:0;}
+label .note{font-weight:normal;font-style:italic;}
+
+#t_admin #t_canvas .t_save{position:relative;top:0;right:0;}
+
+.thesis_options_form.templates{position:relative;}
+#t_admin #t_canvas .t_save.templates{position:absolute;top:0;left:400px;}
+
+#t_nav .topmenu .submenu li {  width: 15em; }
+.list_label .alert{color:orangered;}
+#t_admin .design_note, #t_admin p.warning{  background-color: #f9e6e1;  border:2px solid #f2c5ba;  padding: 20px;  max-width: 500px;  margin-bottom: 24px;}
+.byobagn_canvas_right, .byobagn_canvas_left{float:right;width:50%;min-width:600px;position:relative;}
+.byobagn_canvas_left{float:left;}

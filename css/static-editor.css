@@ -1,0 +1,278 @@
+/*>>Start - BYOB Agility Nude Editor Default CSS */
+/*
+ *
+ * Table of Contents:
+ *
+ * 1.0 - Reset "like" - General
+ * 2.0 - Typography
+ * 3.0 - Structural Grid
+ * 5.0 - Post Box Styles
+ * 13.0 - Icon Styles
+ * 17.0 - Misc
+ * 18.0 - Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+
+ /**
+ * 1.0 Reset "like" - General
+ * -----------------------------------------------------------------------------
+ */
+
+img{
+	max-width:100%;
+	height:auto;
+	display:inline-block;
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter,
+img.alignnone {
+	display:block;
+}
+
+img, .wp-caption {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.left, .alignleft, img[align="left"] {
+	float: left;
+}
+
+.right, .alignright, img[align="right"] {
+	float: right;
+}
+
+.center, .aligncenter, img[align="middle"] {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	float: none;
+	clear: both;
+}
+
+.block, .alignnone {
+	display: block;
+	clear: both;
+}
+
+.alignleft{margin-right:$x_padding_single;}
+
+.alignright{margin-left:$x_padding_single;}
+
+.wp-smiley {
+	display: inline;
+}
+
+.clearfix{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+/** Typical links **/
+a {
+	color: $c_links;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $c_link_hover;
+	text-decoration: underline;
+}
+
+ /**
+ * 2.0 Typography
+ * ----------------------------------------------------------------------------- 
+ */
+ h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+        font-family:$heading_font;
+}
+
+body#tinymce  {
+	font-size: $f_primary_67;
+	font-family:$font;
+	color: $c_primary;
+        line-height:$h_primary_67;
+}
+
+/*  2/3 Column Width   */
+#tinymce p{
+	font-size: $f_primary_67;
+	font-family:$font;
+	color: $c_primary;
+	line-height:$h_primary_67;
+        margin-bottom: $x_67_single;
+}
+/*  Full Column Width   */
+.full p, 
+.full .post_content p{
+	font-size: $f_primary_100;
+	line-height:$h_primary_100;
+}
+code {
+	line-height: 1em;
+}
+pre {
+	overflow: auto;
+	clear: both;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+sub, sup {
+	line-height: 0.5em;
+}
+
+
+
+.sub_columns_2,
+.sub_columns_3,
+.sub_columns_4{
+	clear:both;
+	padding:26px 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sub_columns_2:after,
+.sub_columns_3:after,
+.sub_columns_4:after{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+
+.full,
+.half,
+.one-quarter,
+.one-third,
+.two-thirds,
+.three-quarters{
+	float:left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.full{
+	width:100%;
+	float:none;
+	padding:0 26px;
+}
+.three-quarters{width:75%;}
+.two-thirds{width:66.5%;}
+.half{	width:50%;}
+.one-third{width:33.3%;}
+.one-quarter{width:25%;}
+
+.one-quarter,
+.one-third,
+.half{
+	padding:0 13px;
+}
+
+.two-thirds,
+.three-quarters{
+	padding:0 26px 0 13px;
+}
+
+
+.frameless .full,
+.frameless .half,
+.frameless .one-quarter,
+.frameless .one-third,
+.frameless .two-thirds,
+.frameless .three-quarters,
+.frameless .reverse_wrapper
+.frameless .reverse_wrapper .one-quarter,
+.frameless .reverse_wrapper .half,
+.frameless .reverse_wrapper .one-third,
+.frameless .reverse_wrapper .two-thirds{padding:0;}
+
+
+ /**
+ * 5.0 Post Box Styles
+ * -----------------------------------------------------------------------------
+ */
+/*  Typical Post Box   */
+#tinymce h1 {
+    $headline 
+    margin-bottom: $x_67_half;
+}
+
+#tinymce h2{
+	margin-top: $x_67_3over2;
+	margin-bottom: $x_67_half;
+	$subhead
+}
+#tinymce h3, 
+#tinymce h4 {margin-top: $x_67_3over2; margin-bottom: $x_67_half; $subsubhead }
+
+#tinymce h5, 
+#tinymce .small { $secondary_font }
+
+#tinymce .drop_cap { font-size: $x_67_double; line-height: 1em; margin-right: 9px; float: left; }
+
+#tinymce ul, #tinymce ol, #tinymce blockquote, #tinymce pre, #tinymce dl, #tinymce dd { margin-bottom: $x_67_single; }
+#tinymce ul { list-style-type: square; }
+#tinymce ul, #tinymce ol { margin-left: $x_67_single; }
+#tinymce ul ul, #tinymce ul ol, #tinymce ol ul, #tinymce ol ol { margin-left: $x_67_single; }
+#tinymce ul ul, #tinymce ul ol, #tinymce ol ul, #tinymce ol ol, .wp-caption p { margin-bottom: 0; }
+#tinymce .left, #tinymce .alignleft, #tinymce .ad_left {
+	margin-bottom: $x_67_single;
+	margin-right: $x_67_single;
+}
+#tinymce .right, #tinymce .alignright, #tinymce .ad {
+	margin-bottom: $x_67_single;
+	margin-left: $x_67_single;
+}
+#tinymce .center, #tinymce .aligncenter { margin-bottom: $x_67_single; }
+#tinymce .block, #tinymce .alignnone { margin-bottom: $x_67_single; }
+#tinymce .stack { margin-left: 26px; }
+blockquote {
+        font-weight: bold;
+        font-style: italic;
+        margin-left: $x_67_double;
+}
+blockquote p:last-of-type{
+        margin-bottom: 0px;
+}
+blockquote.right, blockquote.left {
+	margin-bottom: $x_67_half;
+	$blockquote
+	width: 45%;
+}
+blockquote.right, blockquote.left {
+	padding-left: 0;
+	border: 0;
+}
+
+/************** Submit Buttons ***************************/
+.submit a{
+	color: $cg_very_light;
+	background-color: $c_cont_bg_med;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+.submit a:hover{
+	color: $cg_white;
+	background-color: $c_bg_dark;
+	cursor:pointer;
+}
+
+ /**
+ * 13.0 Icon Styles
+ * -----------------------------------------------------------------------------
+ */
+
+i.fa{color:$c_bg_dark;}
+i.fa-fw{padding:4% 1.5%;}
+i.fa-fw.positive{padding:6% 3%;}
+i.circle{border-radius:100%}
+i.positive{
+	border:3px solid $c_bg_dark;
+	color:$c_bg_dark;
+}
+i.negative{
+	background-color:$c_bg_dark;
+	color:$cg_white;
+}
+i.rounded_square{border-radius:10%}
+
+/*>>BYOB Agility Nude Editor Default CSS */
