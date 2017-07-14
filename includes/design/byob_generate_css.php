@@ -177,7 +177,7 @@ class byob_generate_css {
                 foreach ($selectors as $name => $selector) {
                         $output = '';
                         if (!empty($this->design[$name])) {
-                                if ($this->design[$name] === 'cta_1_background') {
+                                if ($name === 'cta_1_background') {
                                         if (!empty($this->design[$name]['apply_to']['apply_to_content'])) {
                                                 $selector .= ', #content_area .call-to-action.cta_1';
                                         }
@@ -187,7 +187,7 @@ class byob_generate_css {
                                                 $selector .= ', #content_area .call-to-action.cta_2';
                                         }
                                 }
-                                if ($this->design[$name] === 'cta_3_background') {
+                                if ($name === 'cta_3_background') {
                                         if (!empty($this->design[$name]['apply_to']['apply_to_content'])) {
                                                 $selector .= ', #content_area .call-to-action.cta_3';
                                         }
