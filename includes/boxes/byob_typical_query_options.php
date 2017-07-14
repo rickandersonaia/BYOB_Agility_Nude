@@ -12,7 +12,7 @@ class byob_typical_query_options {
 	 * This relies on the Thesis options API for defining the options form
 	 */
 	public function multiple() {
-		global $thesis, $wpdb, $wp_taxonomies;
+		global $thesis;
 
 		$filtered_post_types = new byob_get_post_types();
 		$loop_post_types = $post_types = $filtered_post_types->post_types();
@@ -251,7 +251,7 @@ class byob_typical_query_options {
 					'fields' => array(
 						$name . '_page' => array(
 							'type'  => 'text',
-							'width' => 'tiny',
+							'width' => 'short',
 							'label' => __( 'Enter a ' . $singular_name . ' ID', 'byobagn' )
 						)
 					)
