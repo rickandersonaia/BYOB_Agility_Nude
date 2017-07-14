@@ -3,7 +3,7 @@
   Name: BYOB Agility Nude
   Author: Rick Anderson BYOBWebsite.com
   Description: The Nude Version of BYOB Agility Skin. A responsive full width multi column layout skin. This version requires Thesis 2.2 or above
-  Version:  3.2.0.4
+  Version:  3.2.1.0
   Requires: 2.2
   Class: byob_agility_nude
   License: MIT
