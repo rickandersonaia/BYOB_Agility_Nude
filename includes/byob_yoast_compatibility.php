@@ -16,7 +16,8 @@ class byob_yoast_compatibility {
             global $thesis;
             add_filter('thesis_boxes', array($this, 'remove_thesis_meta_boxes'));
             add_filter('thesis_title_tag', array($this, 'use_wp_title'));
-            $this->post_types = $this->post_type_list();
+		    $filtered_post_types = new byob_get_post_types();
+		    $this->post_types = $filtered_post_types->post_types();
             add_action('admin_init', array($this, 'remove_thesis_seo_boxes'));
         
     }
@@ -44,16 +45,6 @@ class byob_yoast_compatibility {
     public function use_wp_title($title) {
             $title = apply_filters('wp_title', $title, '', '');
             return $title;
-    }
-    
-    public function post_type_list(){
-            $get_post_types = get_post_types('', 'objects');
-            $post_types = array();
-            foreach ($get_post_types as $name => $pt_obj){
-                    if (!in_array($name, array('revision', 'nav_menu_item')))
-                            $post_types[$name] = !empty($pt_obj->labels->name) ? esc_html($pt_obj->labels->name) : esc_html($pt_obj->name);
-            }
-            return $post_types;
     }
     
     public function remove_thesis_seo_boxes() {

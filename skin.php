@@ -136,6 +136,7 @@ class byob_agility_nude extends thesis_skin {
                 include_once(BYOBAGN_PATH . '/includes/byob_yoast_compatibility.php');
                 include_once(BYOBAGN_PATH . '/includes/byob_google_fonts.php');
                 include_once(BYOBAGN_PATH . '/includes/byob_page_specific_content_widget.php');
+	            include_once(BYOBAGN_PATH . '/includes/byob_get_post_types.php');
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_config_id.php');
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_config_classes.php');
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_responsive_columns_helper.php');

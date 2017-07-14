@@ -9,11 +9,8 @@ function byobagn_metaboxes(array $meta_boxes) {
 
         $schema_list['options'][""] = __('Default schema', 'byobagn');
 
-        $get_post_types = get_post_types('', 'objects');
-        $post_types = array();
-        foreach ($get_post_types as $name => $pt_obj)
-                if (!in_array($name, array('revision', 'nav_menu_item', 'attachment')))
-                        $post_types[] = $name;
+		$filtered_post_types = new byob_get_post_types();
+		$post_types = $filtered_post_types->simple_post_type_list();
 
         $prefix = 'byob_';
 

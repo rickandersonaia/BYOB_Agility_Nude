@@ -33,7 +33,9 @@ class byob_typical_query {
                             'posts_per_page' => !empty($this->options['num']) ? (int) $this->options['num'] : 5,
                             'ignore_sticky_posts' => !empty($this->options['sticky']) ? 0 : 1,
                             'order' => !empty($this->options['order']) && $this->options['order'] == 'ASC' ? 'ASC' : 'DESC',
-                            'orderby' => !empty($this->options['orderby']) && in_array($this->options['orderby'], array('ID', 'author', 'title', 'modified', 'rand', 'comment_count', 'menu_order')) ? (string) $this->options['orderby'] : 'date');
+                            'orderby' => !empty($this->options['orderby']) && in_array($this->options['orderby'], array('ID', 'author', 'title', 'modified', 'rand', 'comment_count', 'menu_order')) ? (string) $this->options['orderby'] : 'date'
+                        );
+
                         if (!empty($this->options['post_type']) && !empty($this->options[$this->options['post_type'] . '_tax']) && (!empty($this->options[$this->options['post_type'] . '_' . $this->options[$this->options['post_type'] . '_tax'] . '_term_text']) || !empty($this->options[$this->options['post_type'] . '_' . $this->options[$this->options['post_type'] . '_tax'] . '_term'])))
                                 $query['tax_query'] = array(
                                     array(

@@ -4472,14 +4472,9 @@ class byobagn_schema_settings extends thesis_box {
         protected function class_options() {
                 global $thesis;
                 $schema_list = $this->schema_list;
+                $filtered_post_types = new byob_get_post_types();
+                $post_types = $filtered_post_types->post_types();
 
-                $get_post_types = get_post_types('', 'objects');
-                $post_types = array();
-                foreach ($get_post_types as $name => $pt_obj) {
-                        if (!in_array($name, array('revision', 'nav_menu_item', 'attachment'))) {
-                                $post_types[$name] = !empty($pt_obj->labels->name) ? esc_html($pt_obj->labels->name) : esc_html($pt_obj->name);
-                        }
-                }
                 foreach ($post_types as $key => $label) {
                         $schema_list['label'] = __('Choose a default schema for the ' . $label . ' post type', 'byobagn');
                         $options[$key] = $schema_list;
