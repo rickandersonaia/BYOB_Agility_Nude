@@ -2035,11 +2035,22 @@ class byobagn_pinterest_sharing_link extends thesis_box {
 
                         $url = get_permalink();
                         $title = strip_tags(get_the_title());
-                        $thumb_id = get_post_thumbnail_id();
-                        $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-                        $thumb_url = $thumb_url_array[0];
-                        $featured_image = !empty($thumb_url) ? esc_url($thumb_url) : '';
-                        echo "<a class=\"pinterest\" title=\"$lable\" target=\"_blank\" href=\"http://pinterest.com/pin/create/bookmarklet/?media=$featured_image&url=$url&is_video=false&description=$title\"><i class=\"fa fa-pinterest-p\"></i>$lable</a>\n";
+                        $thumb_id = get_post_thumbnail_id($post->ID);
+
+                        if(empty($thumb_id)){
+	                        $attachments = get_attached_media( 'image', $post->ID );
+	                        if(is_array($attachments)){
+		                        $first_image = reset($attachments);
+		                        $thumb_id = $first_image->ID;
+                            }
+                        }
+	                if(!empty($thumb_id)) {
+		                $thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'full', false );
+		                $thumb_url       = $thumb_url_array[0];
+		                $featured_image  = ! empty( $thumb_url ) ? esc_url( $thumb_url ) : '';
+
+		                echo "<a class=\"pinterest\" title=\"$lable\" target=\"_blank\" href=\"http://pinterest.com/pin/create/bookmarklet/?media=$featured_image&url=$url&is_video=false&description=$title\"><i class=\"fa fa-pinterest-p\"></i>$lable</a>\n";
+	                }
                 }
         }
 

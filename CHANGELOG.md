@@ -9,3 +9,9 @@
 - New class byob_get_post_types, all methods now use this class 
 - Added more post type exclusions - for WP, WC, WCS, CF7, Photo Gallery & Types.
 - Added link to documentation
+
+## [3.2.1.1 - 7/17/2017]
+### Changed
+- Fixed Pinterest share button so that it searches first for the featured image.  If there is no featured image then it 
+looks for attachment images.  If it finds attachment images it uses the first one for the pin.  If there are no images 
+then it doesn't create a sharing link.
