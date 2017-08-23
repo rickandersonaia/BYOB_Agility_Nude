@@ -223,7 +223,7 @@ class byob_generate_css {
 
                         if (empty($editor_selectors)) {
                                 $submit_selectors = array(
-                                    'typ_submit' => 'input#searchsubmit, input#submit, input.wpcf7-submit, input.gform_button, button, .button-primary,',
+                                    'typ_submit' => 'input#searchsubmit, input#submit, input.wpcf7-submit, input.gform_button, button, .button-primary',
                                     'read_more_submit' => '.submit a, a.read-more, .submit a.num_comments_link',
                                     'cta_submit' => '.thesis_email_form_submit, .call-to-action a, a.call-to-action',
                                     'cta_1_link' => '.call-to-action.cta_1 .cta_submit a, .call-to-action.cta_1 .thesis_email_form_submit',
@@ -278,7 +278,7 @@ class byob_generate_css {
                         }
                         if (empty($editor_hover_selectors)) {
                                 $submit_hover_selectors = array(
-                                    'typ_submit' => 'input#searchsubmit:hover, input#submit:hover, input.wpcf7-submit:hover, input.gform_button:hover, button:hover, .button-primary:hover,',
+                                    'typ_submit' => 'input#searchsubmit:hover, input#submit:hover, input.wpcf7-submit:hover, input.gform_button:hover, button:hover, .button-primary:hover',
                                     'read_more_submit' => '.submit a:hover, a.read-more:hover, .submit a.num_comments_link:hover',
                                     'cta_submit' => '.thesis_email_form_submit.input_submit:hover, .call-to-action a:hover, a.call-to-action:hover',
                                     'cta_1_link' => '.call-to-action.cta_1 .cta_submit a:hover, .call-to-action.cta_1 .thesis_email_form_submit:hover',
