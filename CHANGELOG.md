@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.2.1.3 - 9/1/2017]
+### Changed
+- Fixed error that prevented video widgets from working properly.  
+- Fixed typo in css that broke submit button styles
+- Fixed Attention Box Area widget title css
+
 ## [3.2.1.2 - 7/31/2017]
 ### Changed
 - Fixed default.php so that the CSS is properly escaped.  

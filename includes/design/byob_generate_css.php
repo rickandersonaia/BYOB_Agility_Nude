@@ -513,7 +513,7 @@ class byob_generate_css {
                                 'scale' => 'f7'
                             ),
                             'header_widget_heading' => array(
-                                'selector' => '#header_area .widget_title',
+                                'selector' => '#header_area .widget .widget_title',
                                 'default_width' => 'one-third',
                                 'parent' => 'header_widget',
                                 'heading' => true,
@@ -525,7 +525,7 @@ class byob_generate_css {
                                 'scale' => 'f7'
                             ),
                             'feature_box_widget_heading' => array(
-                                'selector' => '#feature_box_area .widget_title',
+                                'selector' => '#feature_box_area .widget .widget_title',
                                 'default_width' => 'one-third',
                                 'parent' => 'feature_box_widget',
                                 'heading' => true,
@@ -537,7 +537,7 @@ class byob_generate_css {
                                 'scale' => 'f7'
                             ),
                             'attention_box_widget_heading' => array(
-                                'selector' => '#attention_area .widget_title',
+                                'selector' => '#attention_area .widget .widget_title',
                                 'default_width' => 'one-third',
                                 'parent' => 'attention_box_widget',
                                 'heading' => true,
