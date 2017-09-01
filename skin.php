@@ -188,6 +188,7 @@ class byob_agility_nude extends thesis_skin {
 
                 add_filter('thesis_html_body_class', array($this, 'body_class'));
                 add_filter('widget_text', 'do_shortcode');
+                add_filter('wp_video_shortcode_class', array($this, 'video_widget_class'));// needed for mediaelement.js
                 add_filter('mce_css', array($this, 'editor_css'));
                 add_filter('wp_default_scripts', array($this, 'remove_jquery_migrate'));
 
@@ -412,6 +413,13 @@ class byob_agility_nude extends thesis_skin {
 
         public function add_video_script() {
                 wp_enqueue_script('fitvids', BYOBAGN_URL . "/js/jquery.fitvids.js", array('jquery'), '', true);
+        }
+
+        // the following function required for the new video widgets - I don't know why yet
+        // it adds a class name to the widget output that the mediaelement.js is looking for.
+
+        public function video_widget_class(){
+            return "wp-video-shortcode";
         }
 
         public function design_script() {
