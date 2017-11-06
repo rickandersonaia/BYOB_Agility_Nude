@@ -6,6 +6,7 @@
 }
 html {
 	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
@@ -14,8 +15,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-img, abbr, acronym, fieldset {
+img, fieldset {
 	border: 0;
+}
+abbr, acronym {
+	text-decoration: none;
 }
 code {
 	line-height: 1em;
@@ -73,7 +77,7 @@ input[type="submit"], button {
  *
  * Table of Contents:
  *
- * 1.0 - Reset "like" - General
+ * 1.0 - Reset \"like\" - General
  * 2.0 - Typography
  * 3.0 - Structural Grid
  * 4.0 - Menus
@@ -89,14 +93,14 @@ input[type="submit"], button {
  * 14.0 - Social Sharing Styles
  * 15.0 - Post Navigation Styles
  * 16.0 - Misc Styles
- * 17.0 - Misc
+ * 17.0 - WooCommerce Styles
  * 18.0 - Media Queries
  * -----------------------------------------------------------------------------
  */
 
 
  /**
- * 1.0 Reset "like" - General
+ * 1.0 Reset \"like\" - General
  * -----------------------------------------------------------------------------
  */
 body {
@@ -331,7 +335,7 @@ p, .post_box p{
 .frameless .one-third,
 .frameless .two-thirds,
 .frameless .three-quarters,
-.frameless .reverse_wrapper
+.frameless .reverse_wrapper,
 .frameless .reverse_wrapper .one-quarter,
 .frameless .reverse_wrapper .half,
 .frameless .reverse_wrapper .one-third,
@@ -349,7 +353,7 @@ p, .post_box p{
 
 /************** Isotope ***************************/
 .isotope{margin-bottom:41px;}
-.isotope .headline{margin-top:0px;}
+.isotope .headline{margin-top:0;}
 .fluid_grid{
 	padding:15px 10px;
 	box-sizing:border-box;
@@ -676,7 +680,7 @@ p, .post_box p{
 
 .post_box .headline{margin-bottom:14px;}
 
-.post_box .headline_area .headline{margin-bottom:0px;}
+.post_box .headline_area .headline{margin-bottom:0;}
 
 .headline_area{	margin-bottom:14px; font-size: 13px;
 	line-height: 19px;
@@ -1097,10 +1101,11 @@ p.widget_title {
  */
 
 /************** Submit Buttons ***************************/
-.submit a, 
-a.submit, 
+input[type=\"submit\"],
 input#searchsubmit, 
 input#submit, 
+.submit a, 
+a.submit,
 a.read-more, 
 .submit a.num_comments_link,
 .wpcf7-submit,
@@ -1113,10 +1118,11 @@ button,
 	padding: 10px 20px;
 }
 
-.submit a:hover,  
-a.submit:hover, 
+input[type=\"submit\"]:hover,
 input:hover#searchsubmit, 
-input:hover#submit, 
+input:hover#submit,
+.submit a:hover,  
+a.submit:hover,  
 a.read-more:hover, 
 .submit a.num_comments_link:hover,
 .wpcf7-submit:hover,
@@ -1131,13 +1137,13 @@ input#searchsubmit, input#submit{
 	border:none;
 }
 
-#searchform input[type="submit"]{
+#searchform input[type=\"submit\"]{
 	padding:8px 10px;
 }
 .button-group button{margin:0 5px 5px 0}
 
 /************** Input Fields ***************************/
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="url"],textarea {
+input[type=\"text\"], input[type=\"email\"], input[type=\"tel\"], input[type=\"password\"], input[type=\"url\"],textarea {
 	font-size: inherit;
 	line-height: inherit;
 	font-family: inherit;
@@ -1145,15 +1151,15 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 	background-color:#FFFFFF;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus, input[type="url"]:focus{
+input[type=\"text\"]:focus, input[type=\"email\"]:focus, input[type=\"tel\"]:focus, input[type=\"password\"]:focus, input[type=\"url\"]:focus{
 	border-style: solid;
 	background-color:#fff;
 }
-.search_form input[type="text"]{
+.search_form input[type=\"text\"]{
 	width:200px;
 }
 
-#searchform input[type="text"]{
+#searchform input[type=\"text\"]{
 	width:150px;
 }
 
@@ -1415,7 +1421,7 @@ p#comment_form_title{
 	padding-bottom:5px;
 }
 
-#commentform input[type="text"]{
+#commentform input[type=\"text\"]{
 	padding:5px;
 	width:90%;
 	margin-bottom:14px;
@@ -1460,7 +1466,7 @@ p#comment_form_title{
 
 #top_header_area input#searchsubmit{padding:5px 20px;}
 
-#top_header_area input[type="text"]{
+#top_header_area input[type=\"text\"]{
   font-size: 13px;
 	line-height: 19px;
 	color: #A9A9A9;;
@@ -1700,6 +1706,38 @@ i.rounded_square{border-radius:10%}
 .post_box .post_content:after, 
 .comment .comment_text:after, 
 ul.menu>li.menu-item>:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+
+ /**
+ * 17.0 WooCommerce
+ * -----------------------------------------------------------------------------
+ */
+.related.products{
+	clear:both;
+	padding-top:54px;
+}
+
+.related.products h2{
+	margin-bottom:27px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 35px;
+	line-height: 48px;
+	color: #363636;
+}
+.woocommerce .product .product_title{
+	margin-bottom:27px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 37px;
+	line-height: 49px;
+	color: #171717;
+	line-height:41px;
+}
+.woocommerce-product-details__short-description{ margin-bottom:27px; }
+.woocommerce .product .cart .variations label { font-size: 16px; }
+.woocommerce-variation-price{ margin-bottom:27px; }
+.products .product .woocommerce-loop-product__title {font-size: 15px;
+	line-height: 22px;
+	color: #555555;}
 /* Begin Agility Text Styles */
 /* End Agility Text Styles */
 /* Begin Agility Icon Styles */
