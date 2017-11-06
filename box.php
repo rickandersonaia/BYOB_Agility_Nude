@@ -2576,6 +2576,7 @@ class byobagn_archive_post_box extends thesis_box {
             'byobagn_typical_excerpt',
             'byobagn_postfooter_wrapper',
             'thesis_post_author',
+	        'thesis_post_content',
             'thesis_post_author_avatar',
             'thesis_post_author_description',
             'thesis_post_image',
@@ -3368,6 +3369,7 @@ class byobagn_featured_content_query_box extends thesis_box {
             'byobagn_featured_content_featured_image',
             'byobagn_featured_content_post_title',
             'thesis_post_date',
+	        'thesis_post_content',
             'byobagn_typical_excerpt',
             'thesis_post_categories',
             'thesis_post_tags',
@@ -3380,6 +3382,7 @@ class byobagn_featured_content_query_box extends thesis_box {
             'byobagn_featured_content_read_more');
         public $exclude = array();
         private $query = false;
+        public $post_id = '';
 
         protected function translate() {
                 $this->title = $this->name = __('Agility Featured Content Box', 'byobagn');
@@ -3432,13 +3435,15 @@ class byobagn_featured_content_query_box extends thesis_box {
 //                var_dump($this->options);
                 while ($this->query->have_posts()) {
                         $this->query->the_post();
+                        $this->post_id = $this->query->post->ID;
                         do_action('thesis_init_post_meta', $this->query->post->ID);
                         $schema = $this->qb->setup_schema($this->query->post->ID);
                         $schema_att = $schema ? ' itemscope itemtype="' . esc_url($thesis->api->schema->types[$schema]) . '"' : '';
 
                         echo "$tab<$html$class$schema_att>\n";
 
-                        $this->rotator(array_merge($args, array('depth' => $depth + 1, 'schema' => $schema, 'post_id' => $this->query->post->ID), $this->options));
+                        $this->rotator(array_merge($args, array('depth' => $depth + 1, 'schema' => $schema,
+                                                                'post_id' => $this->post_id), $this->options));
 
                         echo "$tab</$html>\n";
                 }
@@ -3536,7 +3541,7 @@ class byobagn_enhanced_query_box extends thesis_box {
                         }
                 } else {
                         if ($is_list) {
-                                $class = $classout->given('query_list', false, $secondary);
+                                $class = $classout->given('query_list', false);
                         } else {
                                 $class = $classout->given('query_box', false);
                         }
@@ -3576,6 +3581,8 @@ class byobagn_enhanced_query_box extends thesis_box {
         }
 
 }
+
+
 
 class byobagn_related_posts_query_box extends thesis_box {
 
