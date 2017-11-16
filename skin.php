@@ -3,7 +3,7 @@
   Name: BYOB Agility Nude
   Author: Rick Anderson BYOBWebsite.com
   Description: The Nude Version of BYOB Agility Skin. A responsive full width multi column layout skin. This version requires Thesis 2.2 or above
-  Version:  3.2.1.3
+  Version:  3.2.1.4
   Requires: 2.3
   Class: byob_agility_nude
   Docs: https://www.byobwebsite.com/plugins/skins-for-thesis-theme-2-0/byob-agility-a-responsive-2-column-skin-for-thesis-2/
@@ -155,6 +155,7 @@ class byob_agility_nude extends thesis_skin {
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_post_meta_definitions.php');
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_grid_content_patterns.php');
                 include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_social_profile_helper.php');
+	            include_once(BYOBAGN_PATH . '/includes/boxes/byobagn_get_attachment_id.php');
 
                 include_once( BYOBAGN_PATH . '/includes/design/byobagn_original_font_spacing_calculation.php');
                 include_once( BYOBAGN_PATH . '/includes/design/byob_text_dimensions_calculation.php');

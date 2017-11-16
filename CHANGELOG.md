@@ -1,5 +1,13 @@
 # Change Log
 
+## [3.2.1.4 - 11/16/2017]
+### Changed
+- Fixed image height calculation error in deprecated 1 Column Header.  
+- Added Post Content to drawer of Featured Content Query Box
+### Added
+- New class byobagn_get_attachment_id class - currently gets attachment id from URL 
+
+
 ## [3.2.1.3 - 9/1/2017]
 ### Changed
 - Fixed error that prevented video widgets from working properly.  

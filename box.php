@@ -5816,12 +5816,15 @@ class byobagn_1_column_header extends thesis_box {
                             'before_title' => '<h4 class="widget_title">',
                             'after_title' => '</h4>'));
                 }
-
-                if ((isset($this->options['tablet_image_url']) && $this->options['tablet_image_url']) || (isset($this->options['phone_image_url']) && $this->options['phone_image_url']))
-                        add_action('wp_head', array($this, 'head_css'));
         }
 
-        protected function html_options() {
+        public function preload() {
+	        if ((isset($this->options['tablet_image_url']) && $this->options['tablet_image_url']) ||
+	            (isset($this->options['phone_image_url']) && $this->options['phone_image_url']))
+		        add_action('wp_head', array($this, 'head_css'));
+        }
+
+		protected function html_options() {
                 global $thesis;
                 $options = $thesis->api->html_options();
                 unset($options['class']);
@@ -5897,29 +5900,48 @@ class byobagn_1_column_header extends thesis_box {
         }
 
         public function head_css() {
+        	    global $thesis;
                 $full = $tablet = $tablet1 = $phone = "";
                 $full_url = !empty($this->options['full_image_url']) ? $this->options['full_image_url'] : false;
                 $tabletl_url = !empty($this->options['tablet_landscape_image_url']) ? $this->options['tablet_landscape_image_url'] : false;
                 $tablet_url = !empty($this->options['tablet_image_url']) ? $this->options['tablet_image_url'] : false;
                 $phone_url = !empty($this->options['phone_image_url']) ? $this->options['phone_image_url'] : false;
                 $id = !empty($this->options['id']) ? trim($thesis->api->esc($this->options['id'])) : 'header_columns';
-
+	            $image_id = new byobagn_get_attachment_id();
 
                 if ($full_url) {
-                        list($full_width, $full_height, $type, $attr) = getimagesize($full_url);
-                        $full = "\n #" . $id . " .full{padding-left:0; padding-right:0} #" . $id . " .full a.header-image{display:block; background-image:url('" . $full_url . "'); background-position:top center; background-repeat:no-repeat; height:{$full_height}px; width:100%;} \n";
+                	    $full_image_id = $image_id->get_attachment_id_from_url($full_url);
+                	    $full_meta = wp_get_attachment_metadata($full_image_id);
+                        $full_height = $full_meta['height'];
+                        $full = "\n #" . $id . " .full{padding-left:0; padding-right:0} #" . $id . " .full a.header-image{
+                        display:block; background-image:url('" . $full_url . "'); background-position:top center; 
+                        background-repeat:no-repeat; height:{$full_height}px; width:100%;} \n";
                 }
                 if ($tabletl_url) {
-                        list($tabletl_width, $tabletl_height, $type, $attr) = getimagesize($tabletl_url);
-                        $tabletl = "\n @media only screen and (max-width:1024px), screen and (max-device-width:1024px) and (orientation:landscape){ #" . $id . " .full a.header-image{display:block; background-image:url('" . $tabletl_url . "'); background-position:top center; background-repeat:no-repeat; height:{$tabletl_height}px; width:100%;} }\n";
+		                $tabletl_image_id = $image_id->get_attachment_id_from_url($tabletl_url);
+		                $tabletl_meta = wp_get_attachment_metadata($tabletl_image_id);
+		                $tabletl_height = $tabletl_meta['height'];
+                        $tabletl = "\n @media only screen and (max-width:1024px), screen and (max-device-width:1024px) 
+                        and (orientation:landscape){ #" . $id . " .full a.header-image{display:block; 
+                        background-image:url('" . $tabletl_url . "'); background-position:top center; background-repeat:no-repeat; 
+                        height:{$tabletl_height}px; width:100%;} }\n";
                 }
                 if ($tablet_url) {
-                        list($tablet_width, $tablet_height, $type, $attr) = getimagesize($tablet_url);
-                        $tablet = "\n @media only screen and (max-width:800px), screen and (max-device-width:800px) and (orientation:portrait){ #" . $id . " .full a.header-image{display:block; background-image:url('" . $tablet_url . "'); background-position:top center; background-repeat:no-repeat; height:{$tablet_height}px; width:100%;} }\n";
+		                $tablet_image_id = $image_id->get_attachment_id_from_url($tablet_url);
+		                $tablet_meta = wp_get_attachment_metadata($tablet_image_id);
+		                $tablet_height = $tablet_meta['height'];
+                        $tablet = "\n @media only screen and (max-width:800px), screen and (max-device-width:800px) 
+                        and (orientation:portrait){ #" . $id . " .full a.header-image{display:block; 
+                        background-image:url('" . $tablet_url . "'); background-position:top center; 
+                        background-repeat:no-repeat; height:{$tablet_height}px; width:100%;} }\n";
                 }
                 if ($phone_url) {
-                        list($phone_width, $phone_height, $type, $attr) = getimagesize($phone_url);
-                        $phone = "\n @media only screen and (max-width:500px), screen and (max-device-width:500px){ #" . $id . " .full a.header-image{display:block; background-image:url('" . $phone_url . "'); background-position:top center; background-repeat:no-repeat; height:{$phone_height}px; width:100%;} }\n";
+	                $phone_image_id = $image_id->get_attachment_id_from_url($phone_url);
+	                $phone_meta = wp_get_attachment_metadata($phone_image_id);
+	                $phone_height = $phone_meta['height'];
+	                $phone = "\n @media only screen and (max-width:500px), screen and (max-device-width:500px){
+	                 #" . $id . " .full a.header-image{display:block; background-image:url('" . $phone_url . "'); 
+	                 background-position:top center; background-repeat:no-repeat; height:{$phone_height}px; width:100%;} }\n";
                 }
                 echo "\n <style type=\"text/css\">" . $full . $tabletl . $tablet . $phone . "</style> \n";
         }

@@ -2807,7 +2807,7 @@ function byob_agility_nude_defaults() {
  *
  * Table of Contents:
  *
- * 1.0 - Reset \\"like\\" - General
+ * 1.0 - Reset "like" - General
  * 2.0 - Typography
  * 3.0 - Structural Grid
  * 4.0 - Menus
@@ -2830,7 +2830,7 @@ function byob_agility_nude_defaults() {
 
 
  /**
- * 1.0 Reset \\"like\\" - General
+ * 1.0 Reset "like" - General
  * -----------------------------------------------------------------------------
  */
 body {
@@ -3740,7 +3740,7 @@ p.widget_title {
  */
 
 /************** Submit Buttons ***************************/
-input[type=\\"submit\\"],
+input[type="submit"],
 input#searchsubmit, 
 input#submit, 
 .submit a, 
@@ -3757,7 +3757,7 @@ button,
 	padding: 10px 20px;
 }
 
-input[type=\\"submit\\"]:hover,
+input[type="submit"]:hover,
 input:hover#searchsubmit, 
 input:hover#submit,
 .submit a:hover,  
@@ -3776,13 +3776,13 @@ input#searchsubmit, input#submit{
 	border:none;
 }
 
-#searchform input[type=\\"submit\\"]{
+#searchform input[type="submit"]{
 	padding:8px 10px;
 }
 .button-group button{margin:0 5px 5px 0}
 
 /************** Input Fields ***************************/
-input[type=\\"text\\"], input[type=\\"email\\"], input[type=\\"tel\\"], input[type=\\"password\\"], input[type=\\"url\\"],textarea {
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="url"],textarea {
 	font-size: inherit;
 	line-height: inherit;
 	font-family: inherit;
@@ -3790,15 +3790,15 @@ input[type=\\"text\\"], input[type=\\"email\\"], input[type=\\"tel\\"], input[ty
 	background-color:$c_bg_input;
 }
 
-input[type=\\"text\\"]:focus, input[type=\\"email\\"]:focus, input[type=\\"tel\\"]:focus, input[type=\\"password\\"]:focus, input[type=\\"url\\"]:focus{
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus, input[type="url"]:focus{
 	border-style: solid;
 	background-color:#fff;
 }
-.search_form input[type=\\"text\\"]{
+.search_form input[type="text"]{
 	width:200px;
 }
 
-#searchform input[type=\\"text\\"]{
+#searchform input[type="text"]{
 	width:150px;
 }
 
@@ -4031,7 +4031,7 @@ p#comment_form_title{
 	padding-bottom:5px;
 }
 
-#commentform input[type=\\"text\\"]{
+#commentform input[type="text"]{
 	padding:5px;
 	width:90%;
 	margin-bottom:$x_67_half;
@@ -4076,7 +4076,7 @@ p#comment_form_title{
 
 #top_header_area input#searchsubmit{padding:5px 20px;}
 
-#top_header_area input[type=\\"text\\"]{
+#top_header_area input[type="text"]{
   $secondary_font;
   padding: 2px;
 }
@@ -4481,7 +4481,7 @@ ul.menu>li.menu-item>:after{ $z_clearfix }
     array (
       'name' => 'Clear Fix',
       'ref' => 'z_clearfix',
-      'css' => 'content: \\".\\"; display: block; height: 0; clear: both; visibility: hidden;',
+      'css' => 'content: "."; display: block; height: 0; clear: both; visibility: hidden;',
     ),
     'var_1374430987' => 
     array (
