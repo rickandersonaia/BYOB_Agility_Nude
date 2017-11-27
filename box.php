@@ -1896,7 +1896,7 @@ class byobagn_twitter_sharing_link extends thesis_box {
                         $url = get_permalink();
                         $title = strip_tags(get_the_title());
 
-                        echo "<a class=\"twitter\" title=\"$lable\" target=\"_blank\" href=\"https://twitter.com/intent/tweet?url=$url&amp;text=$title ---- &amp;\"><i class=\"fa fa-twitter\"></i>$lable</a>\n";
+                        echo "<a class=\"twitter\" title=\"$lable\" target=\"_blank\" href=\"https://twitter.com/intent/tweet?url=$url&amp;text=$title;\"><i class=\"fa fa-twitter\"></i>$lable</a>\n";
                 }
         }
 
