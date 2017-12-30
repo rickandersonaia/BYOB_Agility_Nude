@@ -1,5 +1,14 @@
 # Change Log
 
+## [3.2.2 - 12/30/2017]
+### Changed
+- Fixed bug in styles for call to action buttons.  
+- Fixed comments boxes to be compatible with Thesis 2.6
+### Added
+- New test to check if Thrive Comments plugin is installed.  If it is then Thesis comments are turned off and a hook is placed for Thrive Comments.
+- Added minor CSS updates for Thrive Comments 
+
+
 ## [3.2.1.4 - 11/16/2017]
 ### Changed
 - Fixed image height calculation error in deprecated 1 Column Header.  
