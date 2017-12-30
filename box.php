@@ -1894,7 +1894,7 @@ class byobagn_twitter_sharing_link extends thesis_box {
                         }
 
                         $url = get_permalink();
-                        $title = strip_tags(get_the_title());
+                        $title = rawurlencode(strip_tags(get_the_title()));
 
                         echo "<a class=\"twitter\" title=\"$lable\" target=\"_blank\" href=\"https://twitter.com/intent/tweet?url=$url&amp;text=$title;\"><i class=\"fa fa-twitter\"></i>$lable</a>\n";
                 }
@@ -1922,7 +1922,7 @@ class byobagn_facebook_sharing_link extends thesis_box {
                         }
 
                         $url = get_permalink();
-                        $title = strip_tags(get_the_title());
+                        $title = rawurlencode(strip_tags(get_the_title()));
 
                         echo "<a class=\"facebook\" title=\"$lable\" target=\"_blank\" href=\"http://www.facebook.com/sharer/sharer.php?u=$url&title=$title\"><i class=\"fa fa-facebook\"></i>$lable</a>\n";
                 }
@@ -1978,7 +1978,7 @@ class byobagn_linkedin_sharing_link extends thesis_box {
                         }
 
                         $url = get_permalink();
-                        $title = strip_tags(get_the_title());
+                        $title = rawurlencode(strip_tags(get_the_title()));
 
                         echo "<a class=\"linkedin\" title=\"$lable\" target=\"_blank\" href=\"http://www.linkedin.com/shareArticle?mini=true&url=$url&title=$title\"><i class=\"fa fa-linkedin\"></i>$lable</a>\n";
                 }
@@ -2006,7 +2006,6 @@ class byobagn_googleplus_sharing_link extends thesis_box {
                         }
 
                         $url = get_permalink();
-                        $title = strip_tags(get_the_title());
 
                         echo "<a class=\"googleplus\" title=\"$lable\" target=\"_blank\" href=\"https://plus.google.com/share?url=$url\"><i class=\"fa fa-google-plus\"></i>$lable</a>\n";
                 }
@@ -2275,7 +2274,7 @@ class byobagn_call_to_action extends thesis_box {
                         echo "$tab\t<div class=\"overlay\">\n";
                 }
                 if ($configuration == 'cta_short') {
-                        echo "\n$tab\t<p class=\"message\">$message <a class =\"cta_link\" href=\"$link_url\">$link_text</a></p>";
+                        echo "\n$tab\t<p class=\"message\">$message <span class =\"cta_submit\"> <a class =\"cta_link\" href=\"$link_url\">$link_text</a></span></p>";
                 } else {
                         if ($use_heading) {
                                 echo "\n$tab\t<p class=\"heading\">$heading</p>";
@@ -4860,7 +4859,7 @@ class byobagn_comment_list extends thesis_box {
             'thesis_comment_date',
             'byobagn_comment_action_wrapper',
             'thesis_comment_text');
-        public $abort = false;
+        public $override = false;
         public $templates = array('single', 'page');
 
         protected function translate() {
@@ -4871,21 +4870,15 @@ class byobagn_comment_list extends thesis_box {
                 $this->com = new thesis_comments();
         }
 
-        protected function html_options() {
-                global $thesis;
-                $html = $thesis->api->html_options(array(
-                    'ul' => 'ul',
-                    'ol' => 'ol',
-                    'div' => 'div',
-                    'section' => 'section'), 'ul');
-                unset($html['id'], $html['class']);
-                return array_merge($html, array(
-                    'per_page' => array(
-                        'type' => 'text',
-                        'width' => 'tiny',
-                        'label' => __('Comments Per Page', 'byobagn'),
-                        'tooltip' => sprintf(__('The default is set in the <a href="%s">WordPress General &rarr; Discussion options</a>, but you can override that here.', 'byobagn'), admin_url('options-discussion.php')),
-                        'default' => get_option('comments_per_page'))));
+		protected function html_options() {
+			global $thesis;
+			$html = $thesis->api->html_options(array(
+				'ul' => 'ul',
+				'ol' => 'ol',
+				'div' => 'div',
+				'section' => 'section'), 'ul');
+			unset($html['id'], $html['class']);
+			return $html;
         }
 
         public function preload() {
@@ -4893,50 +4886,51 @@ class byobagn_comment_list extends thesis_box {
         }
 
         public function html($args = array()) {
-                global $thesis, $wp_query, $post;
-                extract($args = is_array($args) ? $args : array());
-                $tab = str_repeat("\t", ($this->tab_depth = !empty($depth) ? $depth : 0));
-                if ($this->abort === false) {
-                        if (post_password_required()) {
-                                echo "$tab\t<p class=\"password_required\">", __('This post is password protected. Enter the password to view comments.', 'byobagn'), "</p>\n";
-                                return;
-                        }
-                        $is_it = apply_filters('comments_template', false);
-                        $html = !empty($this->options['html']) ? $this->options['html'] : 'div';
-                        $this->child_html = in_array($html, array('ul', 'ol')) ? 'li' : 'div';
-                        $hook = trim($thesis->api->esc(!empty($this->options['_id']) ?
-                                                $this->options['_id'] : (!empty($this->options['hook']) ?
-                                                        $this->options['hook'] : $this->_id)));
-                        if (!empty($wp_query->comments)) {
-                                $args = array(
-                                    'walker' => new thesis_comment_walker,
-                                    'callback' => array($this, 'start'),
-                                    'type' => 'comment',
-                                    'style' => $html);
-                                if ((bool) get_option('page_comments'))
-                                        $args['per_page'] = (int) !empty($this->options['per_page']) ? $this->options['per_page'] : get_option('comments_per_page');
-                                do_action("hook_before_$hook");
-                                echo "$tab<$html class=\"comment_list\">\n";
-                                if (!in_array($html, array('ul', 'ol')))
-                                        do_action("hook_top_$hook");
-                                wp_list_comments($args, $wp_query->comments_by_type['comment']);
-                                if (!in_array($html, array('ul', 'ol')))
-                                        do_action("hook_bottom_$hook");
-                                echo "$tab</$html>\n";
-                                do_action("hook_after_$hook");
-                        }
-                } else
-                        include_once($this->abort);
+	        global $thesis, $post;
+	        extract($args = is_array($args) ? $args : array());
+	        $tab = str_repeat("\t", ($this->tab_depth = !empty($depth) ? $depth : 0));
+	        comments_template(false, true);
+	        if (!empty($this->override))
+		        return;
+	        elseif (post_password_required()) {
+		        echo "$tab\t<p class=\"password_required\">", __('This post is password protected. Enter the password to view comments.', 'thesis'), "</p>\n";
+		        return;
+	        }
+	        if (($comments = wp_count_comments($post->ID)) && is_object($comments) && !empty($comments->approved) && $comments->approved > 0) {
+		        $html = !empty($this->options['html']) ? esc_attr($this->options['html']) : 'ul';
+		        $this->child_html = in_array($html, array('ul', 'ol')) ? 'li' : 'div';
+		        $hook = trim(esc_attr(!empty($this->options['_id']) ?
+			        $this->options['_id'] : (!empty($this->options['hook']) ?
+				        $this->options['hook'] : '')));
+		        $args = array(
+			        'walker' => new thesis_comment_walker,
+			        'callback' => array($this, 'start'),
+			        'type' => 'comment',
+			        'style' => $html);
+		        /*				if ((bool) $thesis->api->get_option('page_comments'))
+								$args['per_page'] = (int) !empty($this->options['per_page']) ? $this->options['per_page'] : $thesis->api->get_option('comments_per_page');
+				*/				if (!empty($hook))
+			        $thesis->api->hook("hook_before_$hook");
+		        echo "$tab<$html class=\"comment_list\">\n";
+		        if (!in_array($html, array('ul', 'ol')) && !empty($hook))
+			        $thesis->api->hook("hook_top_$hook");
+		        wp_list_comments($args);
+		        if (!in_array($html, array('ul', 'ol')) && !empty($hook))
+			        $thesis->api->hook("hook_bottom_$hook");
+		        echo "$tab</$html>\n";
+		        if (!empty($hook))
+			        $thesis->api->hook("hook_after_$hook");
+	        }
         }
 
-        public function start($comment, $args, $depth) {
-                global $thesis;
-                $GLOBALS['comment'] = $comment;
-                echo
-                str_repeat("\t", $this->tab_depth + 1),
-                "<$this->child_html class=\"", esc_attr(implode(' ', get_comment_class())), "\" id=\"comment-", get_comment_ID(), "\">\n";
-                $this->rotator(array('depth' => $this->tab_depth + 2));
-        }
+		public function start($comment, $args, $depth) {
+			global $thesis;
+			$GLOBALS['comment'] = $comment;
+			echo
+			str_repeat("\t", $this->tab_depth + 1),
+			"<$this->child_html class=\"", esc_attr(implode(' ', get_comment_class())), "\" id=\"comment-", get_comment_ID(), "\">\n";
+			$this->rotator(array('depth' => $this->tab_depth + 2));
+		}
 
 }
 
