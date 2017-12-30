@@ -4825,17 +4825,22 @@ class byobagn_comment_block extends thesis_box {
         }
 
         public function html($args = array()) {
-                global $thesis;
-                extract($args = is_array($args) ? $args : array());
-                $depth = isset($depth) ? $depth : 0;
-                $tab = str_repeat("\t", $depth);
+        	if(class_exists('Thrive_Comments')){
+        		//apply_filters('comments_template');
+		        comments_template();
+	        }else {
+		        global $thesis;
+		        extract( $args = is_array( $args ) ? $args : array() );
+		        $depth = isset( $depth ) ? $depth : 0;
+		        $tab   = str_repeat( "\t", $depth );
 
-                $classout = new byobagn_config_classes($this->options, 'class');
-                $class = $classout->given('comment_block_wrapper', false);
+		        $classout = new byobagn_config_classes( $this->options, 'class' );
+		        $class    = $classout->given( 'comment_block_wrapper', false );
 
-                echo "$tab<div $class>\n";
-                $this->rotator(array_merge($args, array('depth' => $depth + 1)));
-                echo "$tab</div>\n";
+		        echo "$tab<div id='comments' $class>\n";
+		        $this->rotator( array_merge( $args, array( 'depth' => $depth + 1 ) ) );
+		        echo "$tab</div>\n";
+	        }
         }
 
 }
