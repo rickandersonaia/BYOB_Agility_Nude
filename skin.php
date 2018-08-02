@@ -2,14 +2,14 @@
 /*
   Name: BYOB Agility Nude
   Author: Rick Anderson BYOBWebsite.com
-  Description: The Nude Version of BYOB Agility Skin. A responsive full width multi column layout skin. This version requires Thesis 2.2 or above
-  Version:  3.2.2.0
-  Requires: 2.3
+  Description: The Nude Version of BYOB Agility Skin. A responsive full width multi column layout skin. This version requires Thesis 2.3 or above
+  Version:  3.3
+  Requires: 2.6
   Class: byob_agility_nude
   Docs: https://www.byobwebsite.com/plugins/skins-for-thesis-theme-2-0/byob-agility-a-responsive-2-column-skin-for-thesis-2/
   License: MIT
 
-  Copyright 2015 BYOBWebsite.
+  Copyright 2018 BYOBWebsite.
   DIYthemes, Thesis, and the Thesis Theme are registered trademarks of DIYthemes, LLC.
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
