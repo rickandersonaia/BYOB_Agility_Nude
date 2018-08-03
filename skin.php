@@ -553,6 +553,7 @@ class byob_agility_nude extends thesis_skin {
                     'byobagn_match_height',
                     'byobagn_title_and_tagline',
                     'byobagn_responsive_images',
+                    'byobagn_template_responsive_image',
                     'byobagn_header_image',
                     'byobagn_social_sharing_links',
                     'byobagn_thesis_email_signup_call_to_action'
