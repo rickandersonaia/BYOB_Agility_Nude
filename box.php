@@ -402,6 +402,12 @@ class byobagn_template_responsive_image extends thesis_box {
 				'upload_label' => __( 'Full width image - 1920 px wide (screen) or page width', 'byobagn' ),
 				'tooltip'      => __( 'Enter the URL for the image - recommended image width is 1920px', 'byobagn' ),
 			),
+			'image_page'             => array(
+				'type'         => 'add_media',
+				'label'        => __( 'Choose the page width image', 'byobagn' ),
+				'upload_label' => __( 'Page width image', 'byobagn' ),
+				'tooltip'      => __( 'Enter the URL for the image - recommended image width is width of page', 'byobagn' ),
+			),
 			'image_tablet_landscape' => array(
 				'type'         => 'add_media',
 				'label'        => __( 'Choose the tablet landscape image', 'byobagn' ),
@@ -462,6 +468,7 @@ class byobagn_template_responsive_image extends thesis_box {
 
 	public function single_or_multiple_images() {
 		if ( ! empty( $this->options['image_full'] )
+		     && empty( $this->options['image_page'] )
 		     && empty( $this->options['image_tablet_landscape'] )
 		     && empty( $this->options['image_tablet_portrait'] )
 		     && empty( $this->options['image_phone_landscape'] )
@@ -474,17 +481,20 @@ class byobagn_template_responsive_image extends thesis_box {
 	}
 
 	public function picture_from_multiple_images( $alt ) {
-		$full_url        = ! empty( $this->options['image_full']['url'] ) ? esc_url( $this->options['image_full']['url'] ) : false;
-		$tablet_land_url = ! empty( $this->options['image_tablet_landscape']['url'] ) ? esc_url( $this->options['image_tablet_landscape']['url'] ) : $full_url;
-		$tablet_port_url = ! empty( $this->options['image_tablet_portrait']['url'] ) ? esc_url( $this->options['image_tablet_portrait']['url'] ) : $tablet_land_url;
-		$phone_land_url  = ! empty( $this->options['image_phone_landscape']['url'] ) ? esc_url( $this->options['image_phone_landscape']['url'] ) : $tablet_port_url;
-		$phone_port_url  = ! empty( $this->options['image_phone_portrait']['url'] ) ? esc_url( $this->options['image_phone_portrait']['url'] ) : $phone_land_url;
+		$base = get_site_url();
+		$full_url        = ! empty( $this->options['image_full']['url'] ) ? $base . esc_url( $this->options['image_full']['url'] ) : false;
+		$page_url = ! empty( $this->options['image_page']['url'] ) ? $base . esc_url( $this->options['image_page']['url'] ) : $full_url;
+		$tablet_land_url = ! empty( $this->options['image_tablet_landscape']['url'] ) ? $base . esc_url( $this->options['image_tablet_landscape']['url'] ) : $page_url;
+		$tablet_port_url = ! empty( $this->options['image_tablet_portrait']['url'] ) ? $base . esc_url( $this->options['image_tablet_portrait']['url'] ) : $tablet_land_url;
+		$phone_land_url  = ! empty( $this->options['image_phone_landscape']['url'] ) ? $base . esc_url( $this->options['image_phone_landscape']['url'] ) : $tablet_port_url;
+		$phone_port_url  = ! empty( $this->options['image_phone_portrait']['url'] ) ? $base . esc_url( $this->options['image_phone_portrait']['url'] ) : $phone_land_url;
 		$output          = "<picture>\n";
 		$output          .= "\t<source media=\"(max-width: 615px)\" srcset=\"$phone_port_url\">\n";
-		$output          .= "\t<source media=\"(max-width: 4150px)\" srcset=\"$phone_land_url\">\n";
+		$output          .= "\t<source media=\"(max-width: 415px)\" srcset=\"$phone_land_url\">\n";
 		$output          .= "\t<source media=\"(max-width: 800px)\" srcset=\"$tablet_port_url\">\n";
-		$output          .= "\t<source media=\"(max-width: 1032px)\" srcset=\"$tablet_land_url\">\n";
-		$output          .= "\t<source media=\"(min-width: 1033px)\" srcset=\"$full_url\">\n";
+		$output          .= "\t<source media=\"(max-width: 1024px)\" srcset=\"$tablet_land_url\">\n";
+		$output          .= "\t<source media=\"(max-width: 1140px)\" srcset=\"$page_url\">\n";
+		$output          .= "\t<source media=\"(min-width: 1141px)\" srcset=\"$full_url\">\n";
 		$output          .= "\t<img class=\"banner-image\" src=\"$full_url\" alt=\"$alt\">\n";
 		$output          .= "</picture>\n";
 

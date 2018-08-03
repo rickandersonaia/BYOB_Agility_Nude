@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae8fae53-b345-400c-8678-72c05f65788e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/box.php" beforeDir="false" afterPath="$PROJECT_DIR$/box.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/editor-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/editor-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin.php" beforeDir="false" afterPath="$PROJECT_DIR$/skin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="box.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="495" column="70" selection-start-line="495" selection-start-column="70" selection-end-line="495" selection-end-column="70" />
+            <state relative-caret-position="270">
+              <caret line="494" column="63" selection-start-line="494" selection-start-column="63" selection-end-line="494" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -151,7 +149,7 @@
       <updated>1525536118570</updated>
       <workItem from="1525536120512" duration="631000" />
       <workItem from="1533232341358" duration="7776000" />
-      <workItem from="1533310902999" duration="4755000" />
+      <workItem from="1533310902999" duration="6583000" />
     </task>
     <task id="LOCAL-00001" summary="Chore: Start 3.3 update&#10;Various minor bug fixes">
       <created>1533232536671</created>
@@ -164,7 +162,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13162000" />
+    <option name="totallyTimeSpent" value="14990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -244,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/box.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="495" column="70" selection-start-line="495" selection-start-column="70" selection-end-line="495" selection-end-column="70" />
+        <state relative-caret-position="270">
+          <caret line="494" column="63" selection-start-line="494" selection-start-column="63" selection-end-line="494" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
