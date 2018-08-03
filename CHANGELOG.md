@@ -1,16 +1,5 @@
 # Change Log
 
-## [3.2.2 - 12/30/2017]
-### Changed
-- Fixed bug in styles for call to action buttons.  
-- Fixed comments boxes to be compatible with Thesis 2.6
-### Added
-- New test to check if Thrive Comments plugin is installed.  If it is then Thesis comments are turned off and a hook is placed for Thrive Comments.
-- Added minor CSS updates for Thrive Comments 
-### Special Update Instructions
-Be sure to restore defaults of Skin CSS & CSS Variables.  Once you have done that, got to Skin Design and save any of the Skin Design Options.
-
-
 ## [3.2.1.4 - 11/16/2017]
 ### Changed
 - Fixed image height calculation error in deprecated 1 Column Header.  

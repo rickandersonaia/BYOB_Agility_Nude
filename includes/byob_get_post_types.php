@@ -43,7 +43,7 @@ class byob_get_post_types {
 		$get_post_types = get_post_types( $post_type_args, 'objects' );
 		$post_types     = array();
 		foreach ( $get_post_types as $name => $pt_obj ) {
-			if ( ! in_array( $name, $this->excluded_post_types ) ) {
+			if ( ! in_array( $name, $this->excluded_post_types) ) {
 				$post_types[ $name ] = ! empty( $pt_obj->labels->name ) ? esc_html( $pt_obj->labels->name ) : esc_html( $pt_obj->name );
 			}
 		}
@@ -61,7 +61,7 @@ class byob_get_post_types {
 		$get_post_types = get_post_types( $post_type_args, 'objects' );
 		$post_types     = array();
 		foreach ( $get_post_types as $name => $pt_obj ) {
-			if ( ! in_array( $name, $this->excluded_post_types ) ) {
+			if ( ! in_array( $name, $this->excluded_post_types) ) {
 				$post_types[] = $name;
 			}
 		}

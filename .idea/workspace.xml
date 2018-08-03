@@ -2,18 +2,112 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae8fae53-b345-400c-8678-72c05f65788e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/byob_agility_nude.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/byob_format_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/byob_format_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/byobagn_default_template_restore.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/byobagn_default_template_restore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/byobagn_flatten_box_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/byobagn_flatten_box_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/byobagn_system_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/byobagn_system_status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/box.php" beforeDir="false" afterPath="$PROJECT_DIR$/box.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/byobagn-admin-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/byobagn-admin-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/editor-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/editor-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/static-editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/static-editor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/custom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Sanitize.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Sanitize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Show_Filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Show_Filters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_field.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_field.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_types.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/cmb.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/cmb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.datePicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.datePicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.timePicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.timePicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/bin/install-wp-tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/bin/install-wp-tests.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/includes/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/includes/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/tests/CMB_Core_Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/tests/CMB_Core_Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byob_post_title.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byob_post_title.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byob_read_more_link.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byob_read_more_link.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byob_typical_query.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byob_typical_query.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byob_typical_query_options.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byob_typical_query_options.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byobagn_config_classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byobagn_config_classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byobagn_config_id.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byobagn_config_id.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/byob_get_post_types.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/byob_get_post_types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/byob_google_fonts.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/byob_google_fonts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/byob_page_specific_content_widget.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/byob_page_specific_content_widget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/byob_widget_classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/byob_widget_classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/design/byob_convert_options.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byob_convert_options.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/design/byob_determine_options_scheme.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byob_determine_options_scheme.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/design/byob_generate_editor_css.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byob_generate_editor_css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/design/byob_text_dimensions_calculation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byob_text_dimensions_calculation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/design/byobagn_design.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byobagn_design.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/design/byobagn_design_options.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byobagn_design_options.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/color_picker_fix.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/color_picker_fix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/imagesloaded.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/imagesloaded.pkgd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/.jshintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/CONTRIBUTING.mdown" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/CONTRIBUTING.mdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/README.mdown" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/README.mdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/dist/isotope.pkgd.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/dist/isotope.pkgd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/dist/isotope.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/dist/isotope.pkgd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/isotope.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/isotope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-mode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/fit-rows.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/fit-rows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/masonry.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/masonry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/vertical.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/js/layout-modes/vertical.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/bottom-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/bottom-up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/browserify.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/browserify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/jq-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/jq-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/browserify/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/cells-by-row.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/cells-by-row.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/combination-filters-inclusive.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/combination-filters-inclusive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/combination-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/combination-filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/filter-sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/filter-sort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/fitrows.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/fitrows.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/horizontal-layout-modes.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/horizontal-layout-modes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/insert.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/insert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/js/require-js.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/js/require-js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/masonry-horizontal.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/masonry-horizontal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/masonry.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/masonry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/require-js.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/require-js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/right-to-left.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/right-to-left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/sandbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/sandbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/sorting.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/sorting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/stamps.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/stamps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/transition-bug.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/sandbox/transition-bug.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/.jshintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/filtering.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/filtering.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/fit-rows.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/fit-rows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/get-segment-size.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/get-segment-size.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/layout-complete.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/layout-complete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/masonry-measure-columns.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/masonry-measure-columns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/masonry-stamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/masonry-stamp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/sort-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/sort-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/sorting.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/sorting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/tests.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope-master/isotope-master/test/tests.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/isotope.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/isotope.pkgd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.fitvids.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.fitvids.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.matchHeight-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.matchHeight-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skin.php" beforeDir="false" afterPath="$PROJECT_DIR$/skin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +122,8 @@
       <file leaf-file-name="skin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="147">
+              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -39,12 +133,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>images_</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>image_</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/box.php" />
         <option value="$PROJECT_DIR$/skin.php" />
       </list>
     </option>
@@ -54,10 +157,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/node_modules" />
-    <handled-path value="$PROJECT_DIR$/js/isotope-master/isotope-master/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -90,6 +189,11 @@
             </path>
             <path>
               <item name="byob_agility_nude" type="b2602c69:ProjectViewProjectNode" />
+              <item name="byob_agility_nude" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="byob_agility_nude" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -102,6 +206,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -126,27 +231,36 @@
       <option name="presentableId" value="Default" />
       <updated>1525536118570</updated>
       <workItem from="1525536120512" duration="631000" />
-      <workItem from="1533232341358" duration="96000" />
+      <workItem from="1533232341358" duration="7776000" />
+      <workItem from="1533310902999" duration="243000" />
     </task>
+    <task id="LOCAL-00001" summary="Chore: Start 3.3 update&#10;Various minor bug fixes">
+      <created>1533232536671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533232536671</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="727000" />
+    <option name="totallyTimeSpent" value="8650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4969475" visible="true" weight="0.2553305" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.11363637" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Structure" order="1" sideWeight="0.50305253" side_tool="true" visible="true" weight="0.2553305" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -161,14 +275,72 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chore: Start 3.3 update&#10;Various minor bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chore: Start 3.3 update&#10;Various minor bug fixes" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/box.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="505" column="1" lean-forward="true" selection-start-line="366" selection-end-line="505" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#13899#22039#0#PHP" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="e#127#131#0" expanded="true" />
+            <element signature="e#136#140#0" expanded="true" />
+            <element signature="e#111#115#0" expanded="true" />
+            <element signature="e#143#147#0" expanded="true" />
+            <element signature="e#169#173#0" expanded="true" />
+            <element signature="e#178#182#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/byob_widget_classes.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/skin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        <state relative-caret-position="147">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>

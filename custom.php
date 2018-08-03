@@ -8,4 +8,3 @@ Thesis Box system to create elements you can interact with in the Thesis HTML Ed
 
 For more information, please visit: http://diythemes.com/thesis/rtfm/api/box/
 */
-

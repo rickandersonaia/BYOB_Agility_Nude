@@ -256,7 +256,7 @@ class byob_generate_editor_css {
                 $content_widths = $table->column_fonts;
                 $raw_width = $content_widths[$desktop_width][$content_width]['column_width'];
 
-                $output = ".mce-content-body{max-width:" . $thesis->api->css->number($raw_width) . "; margin:0 auto;}\n";
+                $output = ".mce-content-body{max-width:" . $thesis->api->css->number($raw_width) . ";}\n";
                 return $output;
         }
 

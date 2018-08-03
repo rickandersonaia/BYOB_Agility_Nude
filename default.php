@@ -770,6 +770,14 @@ function byob_agility_nude_defaults() {
         '_parent' => 'byobagn_enhanced_query_box_1433346455',
       ),
     ),
+    'byobagn_comment_list' => 
+    array (
+      'byobagn_comment_block_1430918824_byobagn_comment_list' => 
+      array (
+        'html' => 'div',
+        '_parent' => 'byobagn_comment_block_1430918824',
+      ),
+    ),
   ),
   'templates' => 
   array (
@@ -2538,6 +2546,64 @@ function byob_agility_nude_defaults() {
           4 => 'byobagn_content_grid_1430344053',
           5 => 'byobagn_content_grid_1432414619',
         ),
+        'byobagn_easy_header_1430603940' => 
+        array (
+          0 => 'byobagn_easy_header_1430603940_byobagn_column_1',
+          1 => 'byobagn_easy_header_1430603940_byobagn_column_2',
+        ),
+        'byobagn_easy_header_1430603940_byobagn_column_1' => 
+        array (
+          0 => 'byobagn_phone_number_1430603941',
+        ),
+        'byobagn_easy_header_1430603940_byobagn_column_2' => 
+        array (
+          0 => 'byobagn_social_profile_links_1430603942',
+        ),
+        'byobagn_social_profile_links_1430603942' => 
+        array (
+          0 => 'byobagn_social_profile_links_1430603942_byobagn_twitter_link',
+          1 => 'byobagn_social_profile_links_1430603942_byobagn_linkedin_link',
+          2 => 'byobagn_social_profile_links_1430603942_byobagn_facebook_link',
+          3 => 'byobagn_social_profile_links_1430603942_byobagn_stumbleupon_link',
+          4 => 'byobagn_social_profile_links_1430603942_byobagn_googleplus_link',
+          5 => 'byobagn_social_profile_links_1430603942_byobagn_pinterest_link',
+          6 => 'byobagn_social_profile_links_1430603942_byobagn_instagram_link',
+          7 => 'byobagn_social_profile_links_1430603942_byobagn_vimeo_link',
+          8 => 'byobagn_social_profile_links_1430603942_byobagn_vine_link',
+          9 => 'byobagn_social_profile_links_1430603942_byobagn_youtube_link',
+          10 => 'byobagn_social_profile_links_1430603942_byobagn_flickr_link',
+          11 => 'byobagn_social_profile_links_1430603942_byobagn_reddit_link',
+          12 => 'byobagn_social_profile_links_1430603942_byobagn_tumblr_link',
+          13 => 'byobagn_social_profile_links_1430603942_byobagn_slideshare_link',
+          14 => 'byobagn_social_profile_links_1430603942_byobagn_custom1_link',
+          15 => 'byobagn_social_profile_links_1430603942_byobagn_custom2_link',
+        ),
+        'byobagn_easy_header_1430343836' => 
+        array (
+          0 => 'byobagn_easy_header_1430343836_byobagn_column_1',
+          1 => 'byobagn_easy_header_1430343836_byobagn_column_2',
+        ),
+        'byobagn_easy_header_1430343836_byobagn_column_1' => 
+        array (
+          0 => 'byobagn_header_image_1430343837',
+        ),
+        'byobagn_easy_header_1430343836_byobagn_column_2' => 
+        array (
+          0 => 'byobagn_title_and_tagline_1430343838',
+        ),
+        'byobagn_title_and_tagline_1430343838' => 
+        array (
+          0 => 'byobagn_title_and_tagline_1430343838_thesis_site_title',
+          1 => 'byobagn_title_and_tagline_1430343838_thesis_site_tagline',
+        ),
+        'byobagn_easy_header_1432390067' => 
+        array (
+          0 => 'byobagn_easy_header_1432390067_byobagn_column_1',
+        ),
+        'byobagn_easy_header_1432390067_byobagn_column_1' => 
+        array (
+          0 => 'thesis_wp_nav_menu_1432390068',
+        ),
         'byobagn_easy_responsive_columns_1430344266' => 
         array (
           0 => 'byobagn_easy_responsive_columns_1430344266_byobagn_column_1',
@@ -2712,10 +2778,6 @@ function byob_agility_nude_defaults() {
         array (
           0 => 'byobagn_enhanced_query_box_1433346455_byobagn_featured_content_featured_image',
         ),
-        'byobagn_enhanced_query_box_1433346455_byobagn_enhanced_query_box_content_wrapper' => 
-        array (
-          0 => 'byobagn_enhanced_query_box_1433346455_byobagn_enhanced_query_box_content_wrapper_byobagn_typical_excerpt',
-        ),
         'byobagn_content_grid_1430344053_byobagn_column_3' => 
         array (
           0 => 'thesis_wp_widgets_1430344056',
@@ -2736,69 +2798,6 @@ function byob_agility_nude_defaults() {
         'byobagn_content_grid_1432414619_byobagn_column_2' => 
         array (
           0 => 'byobagn_copyright_date_1432414621',
-        ),
-        'byobagn_title_and_tagline_1432390068' => 
-        array (
-          0 => 'byobagn_title_and_tagline_1432390068_thesis_site_title',
-          1 => 'byobagn_title_and_tagline_1432390068_thesis_site_tagline',
-        ),
-        'byobagn_easy_header_1430603940' => 
-        array (
-          0 => 'byobagn_easy_header_1430603940_byobagn_column_1',
-          1 => 'byobagn_easy_header_1430603940_byobagn_column_2',
-        ),
-        'byobagn_easy_header_1430603940_byobagn_column_1' => 
-        array (
-          0 => 'byobagn_phone_number_1430603941',
-        ),
-        'byobagn_easy_header_1430603940_byobagn_column_2' => 
-        array (
-          0 => 'byobagn_social_profile_links_1430603942',
-        ),
-        'byobagn_social_profile_links_1430603942' => 
-        array (
-          0 => 'byobagn_social_profile_links_1430603942_byobagn_twitter_link',
-          1 => 'byobagn_social_profile_links_1430603942_byobagn_linkedin_link',
-          2 => 'byobagn_social_profile_links_1430603942_byobagn_facebook_link',
-          3 => 'byobagn_social_profile_links_1430603942_byobagn_stumbleupon_link',
-          4 => 'byobagn_social_profile_links_1430603942_byobagn_googleplus_link',
-          5 => 'byobagn_social_profile_links_1430603942_byobagn_pinterest_link',
-          6 => 'byobagn_social_profile_links_1430603942_byobagn_instagram_link',
-          7 => 'byobagn_social_profile_links_1430603942_byobagn_vimeo_link',
-          8 => 'byobagn_social_profile_links_1430603942_byobagn_vine_link',
-          9 => 'byobagn_social_profile_links_1430603942_byobagn_youtube_link',
-          10 => 'byobagn_social_profile_links_1430603942_byobagn_flickr_link',
-          11 => 'byobagn_social_profile_links_1430603942_byobagn_reddit_link',
-          12 => 'byobagn_social_profile_links_1430603942_byobagn_tumblr_link',
-          13 => 'byobagn_social_profile_links_1430603942_byobagn_slideshare_link',
-          14 => 'byobagn_social_profile_links_1430603942_byobagn_custom1_link',
-          15 => 'byobagn_social_profile_links_1430603942_byobagn_custom2_link',
-        ),
-        'byobagn_easy_header_1430343836' => 
-        array (
-          0 => 'byobagn_easy_header_1430343836_byobagn_column_1',
-          1 => 'byobagn_easy_header_1430343836_byobagn_column_2',
-        ),
-        'byobagn_easy_header_1430343836_byobagn_column_1' => 
-        array (
-          0 => 'byobagn_header_image_1430343837',
-        ),
-        'byobagn_easy_header_1430343836_byobagn_column_2' => 
-        array (
-          0 => 'byobagn_title_and_tagline_1430343838',
-        ),
-        'byobagn_title_and_tagline_1430343838' => 
-        array (
-          0 => 'byobagn_title_and_tagline_1430343838_thesis_site_title',
-          1 => 'byobagn_title_and_tagline_1430343838_thesis_site_tagline',
-        ),
-        'byobagn_easy_header_1432390067' => 
-        array (
-          0 => 'byobagn_easy_header_1432390067_byobagn_column_1',
-        ),
-        'byobagn_easy_header_1432390067_byobagn_column_1' => 
-        array (
-          0 => 'thesis_wp_nav_menu_1432390068',
         ),
       ),
     ),
@@ -2857,7 +2856,7 @@ img.alignnone {
 
 .alignright{margin-left:$x_padding_single;}
 
-.clearfix{$z_clearfix}
+.clearfix:after{$z_clearfix}
 
 /** Typical links **/
 a {
@@ -4046,6 +4045,8 @@ p#comment_form_title{
 }
 
 #commentform .columns_2{padding-top:0;}
+#comments:after, #thrive-comments:after{$z_clearfix}
+.agility #thrive-comments{margin:0;}
 
  /**
  * 11.0 Area Styles
