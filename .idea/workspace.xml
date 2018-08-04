@@ -30,8 +30,8 @@
       <file leaf-file-name="box.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="494" column="63" selection-start-line="494" selection-start-column="63" selection-end-line="494" selection-end-column="63" />
+            <state relative-caret-position="102">
+              <caret line="2564" lean-forward="true" selection-start-line="2564" selection-end-line="2564" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -137,6 +137,9 @@
       </list>
     </option>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -149,7 +152,7 @@
       <updated>1525536118570</updated>
       <workItem from="1525536120512" duration="631000" />
       <workItem from="1533232341358" duration="7776000" />
-      <workItem from="1533310902999" duration="6583000" />
+      <workItem from="1533310902999" duration="10754000" />
     </task>
     <task id="LOCAL-00001" summary="Chore: Start 3.3 update&#10;Various minor bug fixes">
       <created>1533232536671</created>
@@ -162,7 +165,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14990000" />
+    <option name="totallyTimeSpent" value="19161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -242,8 +245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/box.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="494" column="63" selection-start-line="494" selection-start-column="63" selection-end-line="494" selection-end-column="63" />
+        <state relative-caret-position="102">
+          <caret line="2564" lean-forward="true" selection-start-line="2564" selection-end-line="2564" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />

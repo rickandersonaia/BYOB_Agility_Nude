@@ -411,7 +411,7 @@ class byobagn_template_responsive_image extends thesis_box {
 			'image_tablet_landscape' => array(
 				'type'         => 'add_media',
 				'label'        => __( 'Choose the tablet landscape image', 'byobagn' ),
-				'upload_label' => __( 'Tablet landscape image - 1032px wide', 'byobagn' ),
+				'upload_label' => __( 'Tablet landscape image - 1024px wide', 'byobagn' ),
 				'tooltip'      => __( 'Enter the URL for the image - recommended image width is 1032', 'byobagn' )
 			),
 			'image_tablet_portrait'  => array(
@@ -481,9 +481,9 @@ class byobagn_template_responsive_image extends thesis_box {
 	}
 
 	public function picture_from_multiple_images( $alt ) {
-		$base = get_site_url();
+		$base            = get_site_url();
 		$full_url        = ! empty( $this->options['image_full']['url'] ) ? $base . esc_url( $this->options['image_full']['url'] ) : false;
-		$page_url = ! empty( $this->options['image_page']['url'] ) ? $base . esc_url( $this->options['image_page']['url'] ) : $full_url;
+		$page_url        = ! empty( $this->options['image_page']['url'] ) ? $base . esc_url( $this->options['image_page']['url'] ) : $full_url;
 		$tablet_land_url = ! empty( $this->options['image_tablet_landscape']['url'] ) ? $base . esc_url( $this->options['image_tablet_landscape']['url'] ) : $page_url;
 		$tablet_port_url = ! empty( $this->options['image_tablet_portrait']['url'] ) ? $base . esc_url( $this->options['image_tablet_portrait']['url'] ) : $tablet_land_url;
 		$phone_land_url  = ! empty( $this->options['image_phone_landscape']['url'] ) ? $base . esc_url( $this->options['image_phone_landscape']['url'] ) : $tablet_port_url;
@@ -504,8 +504,8 @@ class byobagn_template_responsive_image extends thesis_box {
 	public function srcset_from_single_image_id( $alt, $id, $img_url ) {
 		$attachment_id = $id;
 		$image_meta    = wp_get_attachment_metadata( $attachment_id );
-		$content = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
-		$output  =  wp_image_add_srcset_and_sizes( $content, $image_meta, $attachment_id );
+		$content       = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
+		$output        = wp_image_add_srcset_and_sizes( $content, $image_meta, $attachment_id );
 
 		return $output;
 	}
@@ -2388,6 +2388,20 @@ class byobagn_call_to_action extends thesis_box {
 		$this->name = $this->title = __( 'Agility Call to Action', 'byobagn' );
 	}
 
+	public function construct() {
+		if ( is_admin() ) {
+			if ( ! empty( $_GET['canvas'] ) && strpos( $_GET['canvas'], 'byobagn' ) === 0 ) {
+
+				add_action( 'admin_enqueue_scripts', array( $this, 'image_loader_styles_and_scripts' ) );
+			}
+		}
+	}
+
+	public function image_loader_styles_and_scripts() {
+		wp_enqueue_media();
+		wp_enqueue_script( 'byobloader', BYOBAGN_URL . '/js/loader.js' );
+	}
+
 	public function options() {
 		$options = array(
 			'configuration'      => array(
@@ -2447,6 +2461,12 @@ class byobagn_call_to_action extends thesis_box {
 				'parent'  => array(
 					'overlay_skin_class' => 'custom'
 				)
+			),
+			'image'              => array(
+				'type'         => 'add_media',
+				'label'        => __( 'Choose an image (optional)', 'byobagn' ),
+				'upload_label' => __( 'Choose an image', 'byobagn' ),
+				'tooltip'      => __( 'Enter the URL for the image or select one by clicking the button', 'byobagn' )
 			),
 			'heading'            => array(
 				'type'    => 'textarea',
@@ -2527,15 +2547,22 @@ class byobagn_call_to_action extends thesis_box {
 		extract( $args = is_array( $args ) ? $args : array() );
 		$depth = isset( $depth ) ? $depth : 0;
 		$tab   = str_repeat( "\t", $depth );
-
+		$base = get_site_url();
 		$use_heading   = isset( $this->options['remove_heading']['remove'] ) ? false : true;
 		$use_message   = isset( $this->options['remove_message']['remove'] ) ? false : true;
+		$image         = ! empty( $this->options['image'] ) ? $this->options['image'] : false;
 		$heading       = ! empty( $this->options['heading'] ) ? wp_kses_post( $this->options['heading'] ) : __( 'Be sure to create some good call to action text', 'byobptsd14' );
 		$message       = ! empty( $this->options['message'] ) ? wp_kses_post( $this->options['message'] ) : __( 'Be sure to create some good call to action text', 'byobptsd14' );
 		$link_text     = ! empty( $this->options['link_text'] ) ? wp_kses_post( $this->options['link_text'] ) : __( 'Do It Now!', 'byobptsd14' );
 		$link_url      = ! empty( $this->options['link_url'] ) ? esc_url( $this->options['link_url'] ) : '#';
 		$overlay       = ! empty( $this->options['overlay']['add'] ) ? true : false;
 		$configuration = ! empty( $this->options['configuration'] ) ? esc_attr( $this->options['configuration'] ) : 'cta_tall';
+
+		$image_url = ! empty( $this->options['image']['url'] ) ? $base . $this->options['image']['url'] : false;
+		$image_id = ! empty( $this->options['image']['url'] ) ? attachment_url_to_postid( $image_url ) : false;
+		$image_alt = ! empty( $image_id ) ? get_post_meta( $image_id, '_wp_attachment_image_alt', true) : false;
+		$image_output =  ! empty( $image_id ) ? $this->srcset_from_single_image_id( $image_alt, $image_id, $image_url ) : false;
+
 
 		$overlay_skin_class = ( ! empty( $this->options['overlay_skin_class'] ) && $this->options['overlay_skin_class'] !== 'custom' ) ? ' ' . esc_attr( $this->options['overlay_skin_class'] ) : false;
 		if ( $overlay_skin_class ) {
@@ -2557,6 +2584,9 @@ class byobagn_call_to_action extends thesis_box {
 		if ( $configuration == 'cta_short' ) {
 			echo "\n$tab\t<p class=\"message\">$message <span class =\"cta_submit\"> <a class =\"cta_link\" href=\"$link_url\">$link_text</a></span></p>";
 		} else {
+			if ( $image_output ) {
+				echo "\n$tab\t$image_output";
+			}
 			if ( $use_heading ) {
 				echo "\n$tab\t<p class=\"heading\">$heading</p>";
 			}
@@ -2570,6 +2600,16 @@ class byobagn_call_to_action extends thesis_box {
 		}
 
 		echo "\n$tab</div>";
+	}
+
+
+
+	public function srcset_from_single_image_id( $alt, $image_id, $img_url ) {
+		$image_meta    = wp_get_attachment_metadata( $image_id );
+		$content       = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
+		$output        = wp_image_add_srcset_and_sizes( $content, $image_meta, $image_id );
+
+		return $output;
 	}
 
 }
