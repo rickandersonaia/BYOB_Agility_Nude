@@ -282,7 +282,8 @@ class byob_agility_nude extends thesis_skin {
                         $yoast = new byob_yoast_compatibility();
                 }
 
-	            add_action( 'cmb2_admin_init', 'byobagn_metaboxes' );
+	            add_action( 'cmb2_admin_init', 'byobagn_page_details_metaboxes' );
+	            add_action( 'cmb2_admin_init', 'byobagn_page_specific_banner_metaboxes' );
                 add_filter('thesis_post_box_dependents', array($this, 'add_post_box_dependents'));
                 add_filter('thesis_query_box_dependents', array($this, 'add_query_box_dependents'));
 

@@ -2,45 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae8fae53-b345-400c-8678-72c05f65788e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/example-functions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Sanitize.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_Show_Filters.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_ajax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_field.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/helpers/cmb_Meta_Box_types.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ico-delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/init.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/cmb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/cmb.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.datePicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/js/jquery.timePicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/bin/install-wp-tests.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/includes/bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/tests/phpunit/tests/CMB_Core_Test.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skin.php" beforeDir="false" afterPath="$PROJECT_DIR$/skin.php" afterDir="false" />
     </list>
@@ -56,8 +17,8 @@
       <file leaf-file-name="skin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="308" column="9" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+            <state relative-caret-position="378">
+              <caret line="285" column="90" lean-forward="true" selection-start-line="285" selection-start-column="90" selection-end-line="285" selection-end-column="90" />
               <folding>
                 <element signature="e#6#1612#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -69,8 +30,8 @@
       <file leaf-file-name="box.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4008">
-              <caret line="2564" selection-start-line="2564" selection-end-line="2564" />
+            <state relative-caret-position="333">
+              <caret line="413" column="75" selection-start-line="413" selection-start-column="39" selection-end-line="413" selection-end-column="75" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -95,8 +56,8 @@
       <file leaf-file-name="byobagn_post_meta_definitions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1323">
-              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+            <state relative-caret-position="250">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
               </folding>
@@ -215,7 +176,7 @@
       <updated>1525536118570</updated>
       <workItem from="1525536120512" duration="631000" />
       <workItem from="1533232341358" duration="7776000" />
-      <workItem from="1533310902999" duration="14245000" />
+      <workItem from="1533310902999" duration="19217000" />
     </task>
     <task id="LOCAL-00001" summary="Chore: Start 3.3 update&#10;Various minor bug fixes">
       <created>1533232536671</created>
@@ -228,13 +189,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22652000" />
+    <option name="totallyTimeSpent" value="27624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.2553305" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -242,7 +203,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2835498" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" visible="true" weight="0.2553305" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5021645" side_tool="true" visible="true" weight="0.2553305" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -297,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="308" column="9" selection-start-line="308" selection-start-column="9" selection-end-line="308" selection-end-column="9" />
+        <state relative-caret-position="378">
+          <caret line="285" column="90" lean-forward="true" selection-start-line="285" selection-start-column="90" selection-end-line="285" selection-end-column="90" />
           <folding>
             <element signature="e#6#1612#0#PHP" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -308,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/box.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4008">
-          <caret line="2564" selection-start-line="2564" selection-end-line="2564" />
+        <state relative-caret-position="333">
+          <caret line="413" column="75" selection-start-line="413" selection-start-column="39" selection-end-line="413" selection-end-column="75" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -332,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        <state relative-caret-position="250">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
           </folding>
