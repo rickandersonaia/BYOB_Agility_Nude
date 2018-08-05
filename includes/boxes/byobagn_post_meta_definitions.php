@@ -173,6 +173,14 @@ function byobagn_page_specific_banner_metaboxes() {
 		)
 	);
 
+	$cmb->add_field( array(
+			'name' => __( 'Alt Text', 'byobagn' ),
+			'desc' => __( 'This is the alt-text that shows up in screen readers - good for SEO', 'byobagn' ),
+			'id'   => $prefix . 'alt_text',
+			'type' => 'text'
+		)
+	);
+
 }
 
 function byobagn_show_if_checked( $cmb ) {
