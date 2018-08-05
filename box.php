@@ -222,6 +222,7 @@ class byobagn_header_image extends thesis_box {
 
 	public $type = 'box';
 
+
 	protected function translate() {
 		$this->name = $this->title = __( 'Thesis Header Image', 'byobagn' );
 	}
@@ -505,6 +506,98 @@ class byobagn_template_responsive_image extends thesis_box {
 		$attachment_id = $id;
 		$image_meta    = wp_get_attachment_metadata( $attachment_id );
 		$content       = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
+		$output        = wp_image_add_srcset_and_sizes( $content, $image_meta, $attachment_id );
+
+		return $output;
+	}
+
+}
+
+class byobagn_page_specific_responsive_image extends thesis_box {
+	public $type = 'box';
+	public $full_url = '';
+	public $page_url = '';
+	public $tablet_land_url = '';
+	public $tablet_port_url = '';
+	public $phone_land_url = '';
+	public $phone_port_url = '';
+
+
+	protected function translate() {
+		$this->name = $this->title = __( 'Agility Page Specific Responsive Image', 'byobagn' );
+	}
+
+	public function html_options() {
+		global $thesis;
+		$options = $thesis->api->html_options();
+		unset( $options['id'] );
+
+		return $options;
+	}
+
+
+	public function html( $args = array() ) {
+		extract( $args = is_array( $args ) ? $args : array() );
+		$tab    = str_repeat( "\t", $depth = ! empty( $depth ) ? $depth : 0 );
+		$output = '';
+		$this->setup_properties();
+		if ( empty( $this->full_url ) ) {
+			return '';
+		}
+
+		$single = $this->single_or_multiple_images();
+
+		if ( true === $single ) {
+			$output = $this->srcset_from_single_image_id();
+		} else {
+			$output = $this->picture_from_multiple_images();
+		}
+		echo $tab . $output;
+	}
+
+	public function setup_properties() {
+		$this->full_url        = ! empty( get_post_meta( get_the_ID(), 'byob_image_full', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_full', true ) ) : false;
+		$this->page_url        = ! empty( get_post_meta( get_the_ID(), 'byob_image_page', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_page', true ) ) : $this->full_url;
+		$this->tablet_land_url = ! empty( get_post_meta( get_the_ID(), 'byob_image_tablet_landscape', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_tablet_landscape', true ) ) : $this->page_url;
+		$this->tablet_port_url = ! empty( get_post_meta( get_the_ID(), 'byob_image_tablet_portrait', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_tablet_portrait', true ) ) : $this->tablet_land_url;
+		$this->phone_land_url  = ! empty( get_post_meta( get_the_ID(), 'byob_image_phone_landscape', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_phone_landscape', true ) ) : $this->tablet_port_url;
+		$this->phone_port_url  = ! empty( get_post_meta( get_the_ID(), 'byob_image_phone_portrait', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_phone_portrait', true ) ) : $this->phone_land_url;
+		$this->full_id         = ! empty( get_post_meta( get_the_ID(), 'byob_image_full_id', true ) ) ? esc_url( get_post_meta( get_the_ID(), 'byob_image_full_id', true ) ) : false;
+		$this->alt_text        = ! empty( get_post_meta( get_the_ID(), 'byob_alt_text', true ) ) ? esc_attr( get_post_meta( get_the_ID(), 'byob_alt_text', true ) ) : false;
+	}
+
+	public function single_or_multiple_images() {
+		if ( ! empty( $this->image_full )
+		     && empty( $this->image_page )
+		     && empty( $this->image_tablet_landscape )
+		     && empty( $this->image_tablet_portrait )
+		     && empty( $this->image_phone_landscape )
+		     && empty( $this->image_phone_portrait )
+		) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function picture_from_multiple_images() {
+		$output = "<picture>\n";
+		$output .= "\t<source media=\"(max-width: 615px)\" srcset=\"$this->phone_port_url\">\n";
+		$output .= "\t<source media=\"(max-width: 415px)\" srcset=\"$this->phone_land_url\">\n";
+		$output .= "\t<source media=\"(max-width: 800px)\" srcset=\"$this->tablet_port_url\">\n";
+		$output .= "\t<source media=\"(max-width: 1024px)\" srcset=\"$this->tablet_land_url\">\n";
+		$output .= "\t<source media=\"(max-width: 1140px)\" srcset=\"$this->page_url\">\n";
+		$output .= "\t<source media=\"(min-width: 1141px)\" srcset=\"$this->full_url\">\n";
+		$output .= "\t<img class=\"banner-image\" src=\"$this->full_url\" alt=\"$this->alt_text\">\n";
+		$output .= "</picture>\n";
+
+		return $output;
+	}
+
+	public function srcset_from_single_image_id() {
+		$attachment_id = $this->full_id;
+		$image_meta    = wp_get_attachment_metadata( $attachment_id );
+		$content       = "<img class=\"banner-image\" src=\"$this->full_url\" alt=\"$this->alt_text\">";
 		$output        = wp_image_add_srcset_and_sizes( $content, $image_meta, $attachment_id );
 
 		return $output;
@@ -2545,9 +2638,9 @@ class byobagn_call_to_action extends thesis_box {
 	public function html( $args = array() ) {
 		global $thesis;
 		extract( $args = is_array( $args ) ? $args : array() );
-		$depth = isset( $depth ) ? $depth : 0;
-		$tab   = str_repeat( "\t", $depth );
-		$base = get_site_url();
+		$depth         = isset( $depth ) ? $depth : 0;
+		$tab           = str_repeat( "\t", $depth );
+		$base          = get_site_url();
 		$use_heading   = isset( $this->options['remove_heading']['remove'] ) ? false : true;
 		$use_message   = isset( $this->options['remove_message']['remove'] ) ? false : true;
 		$image         = ! empty( $this->options['image'] ) ? $this->options['image'] : false;
@@ -2558,10 +2651,10 @@ class byobagn_call_to_action extends thesis_box {
 		$overlay       = ! empty( $this->options['overlay']['add'] ) ? true : false;
 		$configuration = ! empty( $this->options['configuration'] ) ? esc_attr( $this->options['configuration'] ) : 'cta_tall';
 
-		$image_url = ! empty( $this->options['image']['url'] ) ? $base . $this->options['image']['url'] : false;
-		$image_id = ! empty( $this->options['image']['url'] ) ? attachment_url_to_postid( $image_url ) : false;
-		$image_alt = ! empty( $image_id ) ? get_post_meta( $image_id, '_wp_attachment_image_alt', true) : false;
-		$image_output =  ! empty( $image_id ) ? $this->srcset_from_single_image_id( $image_alt, $image_id, $image_url ) : false;
+		$image_url    = ! empty( $this->options['image']['url'] ) ? $base . $this->options['image']['url'] : false;
+		$image_id     = ! empty( $this->options['image']['url'] ) ? attachment_url_to_postid( $image_url ) : false;
+		$image_alt    = ! empty( $image_id ) ? get_post_meta( $image_id, '_wp_attachment_image_alt', true ) : false;
+		$image_output = ! empty( $image_id ) ? $this->srcset_from_single_image_id( $image_alt, $image_id, $image_url ) : false;
 
 
 		$overlay_skin_class = ( ! empty( $this->options['overlay_skin_class'] ) && $this->options['overlay_skin_class'] !== 'custom' ) ? ' ' . esc_attr( $this->options['overlay_skin_class'] ) : false;
@@ -2603,11 +2696,10 @@ class byobagn_call_to_action extends thesis_box {
 	}
 
 
-
 	public function srcset_from_single_image_id( $alt, $image_id, $img_url ) {
-		$image_meta    = wp_get_attachment_metadata( $image_id );
-		$content       = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
-		$output        = wp_image_add_srcset_and_sizes( $content, $image_meta, $image_id );
+		$image_meta = wp_get_attachment_metadata( $image_id );
+		$content    = "<img class=\"banner-image\" src=\"$img_url\" alt=\"$alt\">";
+		$output     = wp_image_add_srcset_and_sizes( $content, $image_meta, $image_id );
 
 		return $output;
 	}
