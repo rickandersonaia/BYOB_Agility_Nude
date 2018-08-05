@@ -133,6 +133,7 @@ class byob_agility_nude extends thesis_skin {
                 include_once(BYOBAGN_PATH . '/admin/byobagn_flatten_box_list.php');
                 include_once(BYOBAGN_PATH . '/admin/byobagn_default_template_restore.php');
 
+	            include_once( BYOBAGN_PATH . '/includes/cmb2/init.php');
                 include_once(BYOBAGN_PATH . '/includes/byob_widget_classes.php');
                 include_once(BYOBAGN_PATH . '/includes/byob_yoast_compatibility.php');
                 include_once(BYOBAGN_PATH . '/includes/byob_google_fonts.php');
@@ -281,8 +282,7 @@ class byob_agility_nude extends thesis_skin {
                         $yoast = new byob_yoast_compatibility();
                 }
 
-                add_action('init', array($this, 'initialize_cmb_meta_boxes'), 9999);
-                add_filter('cmb_meta_boxes', 'byobagn_metaboxes');
+	            add_action( 'cmb2_admin_init', 'byobagn_metaboxes' );
                 add_filter('thesis_post_box_dependents', array($this, 'add_post_box_dependents'));
                 add_filter('thesis_query_box_dependents', array($this, 'add_query_box_dependents'));
 
@@ -306,14 +306,6 @@ class byob_agility_nude extends thesis_skin {
 //                var_dump(get_option('byob_agility_nude_restore_templates'));
 //                var_dump(get_option('byob_agility_nude_boxes'));
 //                var_dump(get_option('byob_agility_nude_templates'));
-        }
-
-        /**
-         * Initialize the metabox class.
-         */
-        public function initialize_cmb_meta_boxes() {
-                if (!class_exists('cmb_Meta_Box'))
-                        require_once BYOBAGN_PATH . '/includes/Custom-Metaboxes-and-Fields-for-WordPress-master/init.php';
         }
 
         public function initialize_widgets() {
