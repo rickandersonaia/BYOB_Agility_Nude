@@ -2386,7 +2386,7 @@ class byobagn_pinterest_sharing_link extends thesis_box {
 	}
 
 	public function html( $args = false ) {
-		global $thesis, $post;
+		global $post;
 		extract( $args = is_array( $args ) ? $args : array() );
 		if ( isset( $options['social_profiles']['use_pinterest'] ) ) {
 
@@ -2402,11 +2402,13 @@ class byobagn_pinterest_sharing_link extends thesis_box {
 
 			if ( empty( $thumb_id ) ) {
 				$attachments = get_attached_media( 'image', $post->ID );
-				if ( is_array( $attachments ) ) {
+				if ( is_array( $attachments ) && !empty($attachments) ) {
 					$first_image = reset( $attachments );
 					$thumb_id    = $first_image->ID;
 				}
 			}
+
+
 			if ( ! empty( $thumb_id ) ) {
 				$thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'full', false );
 				$thumb_url       = $thumb_url_array[0];
