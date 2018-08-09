@@ -333,8 +333,9 @@ class byob_generate_css {
                             ),
                             'section_title' => array(
                                 'selector' => 'p.section_title',
-                                'full_selector' => 'p.section_title',
+                                'full_selector' => '.full p.section_title',
                                 'default_width' => 'full',
+                                'heading' => true,
                                 'scale' => 'f2'
                             ),
                             'copyright' => array(
