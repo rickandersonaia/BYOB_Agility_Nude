@@ -539,6 +539,7 @@ class byobagn_page_specific_responsive_image extends thesis_box {
 	public function html( $args = array() ) {
 		extract( $args = is_array( $args ) ? $args : array() );
 		$tab    = str_repeat( "\t", $depth = ! empty( $depth ) ? $depth : 0 );
+		$banner_text = ! empty( get_post_meta( get_the_ID(), 'byob_banner_text', true ) ) ? wp_kses_post(get_post_meta( get_the_ID(), 'byob_banner_text', true )) : false;
 		$output = '';
 		$this->setup_properties();
 		if ( empty( $this->full_url ) ) {
@@ -551,6 +552,9 @@ class byobagn_page_specific_responsive_image extends thesis_box {
 			$output = $this->srcset_from_single_image_id();
 		} else {
 			$output = $this->picture_from_multiple_images();
+		}
+		if($banner_text){
+			$output .= "$tab<h2 class='banner_text'>$banner_text</h2>";
 		}
 		echo $tab . $output;
 	}
@@ -2947,6 +2951,7 @@ class byobagn_page_post_box extends thesis_box {
 		'byobagn_large_featured_image',
 		'thesis_post_headline',
 		'thesis_post_date',
+		'thesis_post_author',
 		'thesis_post_content',
 		'byobagn_bottom_social_media_extender',
 		'thesis_post_image',
@@ -2957,6 +2962,8 @@ class byobagn_page_post_box extends thesis_box {
 	public $children = array(
 		'byobagn_large_featured_image',
 		'thesis_post_headline',
+		'thesis_post_date',
+		'thesis_post_author',
 		'thesis_post_content',
 		'byobagn_bottom_social_media_extender'
 	);
@@ -4154,7 +4161,7 @@ class byobagn_related_posts_query_box extends thesis_box {
 		}
 
 		if ( ! empty( $this->options['title_text'] ) ) {
-			echo "$tab<$title_html$title_class>" . wp_kses_post( $this->options['title_text'] ) . "</$title_html>\n";
+			echo "$tab<$title_html$title_class>" . sprintf(wp_kses_post( $this->options['title_text'] ), get_the_title() ). "</$title_html>\n";
 		}
 
 		while ( $this->query->have_posts() ) {
@@ -5025,10 +5032,21 @@ class byobagn_schema_settings extends thesis_box {
 		$s = new thesis_schema();
 		$s->init();
 		$this->schema_list = $s->select();
+
+		if ( is_admin() ) {
+			if ( ! empty( $_GET['canvas'] ) && strpos( $_GET['canvas'], 'byobagn' ) === 0 ) {
+
+				add_action( 'admin_enqueue_scripts', array( $this, 'image_loader_styles_and_scripts' ) );
+			}
+		}
+	}
+
+	public function image_loader_styles_and_scripts() {
+		wp_enqueue_media();
+		wp_enqueue_script( 'byobloader', BYOBAGN_URL . '/js/loader.js' );
 	}
 
 	protected function class_options() {
-		global $thesis;
 		$schema_list         = $this->schema_list;
 		$filtered_post_types = new byob_get_post_types();
 		$post_types          = $filtered_post_types->post_types();
@@ -5037,6 +5055,20 @@ class byobagn_schema_settings extends thesis_box {
 			$schema_list['label'] = __( 'Choose a default schema for the ' . $label . ' post type', 'byobagn' );
 			$options[ $key ]      = $schema_list;
 		}
+
+		$options['publisher_name'] = array(
+			'type'        => 'text',
+			'width'       => 'long',
+			'label'       => __( 'Publisher Naem', 'byobagn' ),
+			'description' => __( 'Set the name of the publisher for the Article schema.  This is required.', 'byobagn' )
+		);
+
+		$options['publisher_image'] = array(
+			'type'         => 'add_media',
+			'label'        => __( 'Choose the publisher logo image', 'byobagn' ),
+			'upload_label' => __( 'Publisher Logo - 60px tall, 600px wide', 'byobagn' ),
+			'tooltip'      => __( 'The logo should fit in a 60x600px rectangle., and either be exactly 60px high (preferred), or exactly 600px wide. For example, 450x45px would not be acceptable, even though it fits in the 600x60px rectangle.', 'byobagn' ),
+		);
 
 		return $options;
 	}

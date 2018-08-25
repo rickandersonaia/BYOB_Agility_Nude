@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ae8fae53-b345-400c-8678-72c05f65788e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/design/byob_generate_css.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/design/byob_generate_css.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/box.php" beforeDir="false" afterPath="$PROJECT_DIR$/box.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byobagn_featured_image.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byobagn_featured_image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,37 +15,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="skin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="26901">
               <caret line="1310" column="48" selection-start-line="1310" selection-start-column="31" selection-end-line="1310" selection-end-column="48" />
-              <folding>
-                <element signature="e#6#1612#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="byob_generate_css.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="byob_generate_css.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/design/byob_generate_css.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="765" column="80" lean-forward="true" selection-start-line="765" selection-start-column="80" selection-end-line="765" selection-end-column="80" />
+            <state relative-caret-position="942">
+              <caret line="768" column="71" lean-forward="true" selection-start-line="768" selection-start-column="71" selection-end-line="768" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="box.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="box.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="2408" column="13" lean-forward="true" selection-start-line="2408" selection-start-column="13" selection-end-line="2408" selection-end-column="13" />
+            <state relative-caret-position="617">
+              <caret line="555" column="25" lean-forward="true" selection-start-line="555" selection-start-column="25" selection-end-line="555" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#7124#13897#0#PHP" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#68#72#0" expanded="true" />
@@ -63,11 +60,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="byobagn_featured_image.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_featured_image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="byobagn_post_meta_definitions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="130" column="55" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="55" />
+            <state relative-caret-position="607">
+              <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
               </folding>
@@ -80,6 +86,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>images_</find>
+      <find>kses</find>
     </findStrings>
     <replaceStrings>
       <replace>image_</replace>
@@ -91,10 +98,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" />
         <option value="$PROJECT_DIR$/skin.php" />
-        <option value="$PROJECT_DIR$/box.php" />
         <option value="$PROJECT_DIR$/includes/design/byob_generate_css.php" />
+        <option value="$PROJECT_DIR$/includes/boxes/byobagn_featured_image.php" />
+        <option value="$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php" />
+        <option value="$PROJECT_DIR$/box.php" />
       </list>
     </option>
   </component>
@@ -116,7 +124,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -142,7 +150,7 @@
               <item name="byob_agility_nude" type="b2602c69:ProjectViewProjectNode" />
               <item name="byob_agility_nude" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="boxes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="byob_agility_nude" type="b2602c69:ProjectViewProjectNode" />
@@ -187,7 +195,8 @@
       <updated>1525536118570</updated>
       <workItem from="1525536120512" duration="631000" />
       <workItem from="1533232341358" duration="7776000" />
-      <workItem from="1533310902999" duration="26885000" />
+      <workItem from="1533310902999" duration="28247000" />
+      <workItem from="1534960344495" duration="4737000" />
     </task>
     <task id="LOCAL-00001" summary="Chore: Start 3.3 update&#10;Various minor bug fixes">
       <created>1533232536671</created>
@@ -200,13 +209,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35292000" />
+    <option name="totallyTimeSpent" value="41391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.25799572" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -214,7 +223,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2835498" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5021645" side_tool="true" visible="true" weight="0.2553305" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5032467" side_tool="true" visible="true" weight="0.25799572" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -263,27 +272,23 @@
     <MESSAGE value="Chore: Start 3.3 update&#10;Various minor bug fixes" />
     <option name="LAST_COMMIT_MESSAGE" value="Chore: Start 3.3 update&#10;Various minor bug fixes" />
   </component>
+  <component name="WordPressConfiguration" enabled="true">
+    <wordpressPath>D:\Rick\VVV\www\thesis2_6\public_html</wordpressPath>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/byob_widget_classes.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
+    <entry file="file://$PROJECT_DIR$/skin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="130" column="55" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="26901">
+          <caret line="1310" column="48" selection-start-line="1310" selection-start-column="31" selection-end-line="1310" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/box.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="50568">
           <caret line="2408" column="13" lean-forward="true" selection-start-line="2408" selection-start-column="13" selection-end-line="2408" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#7124#13897#0#PHP" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#68#72#0" expanded="true" />
@@ -302,21 +307,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin.php">
+    <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="1310" column="48" selection-start-line="1310" selection-start-column="31" selection-end-line="1310" selection-end-column="48" />
+        <state relative-caret-position="2730">
+          <caret line="130" column="55" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="55" />
           <folding>
-            <element signature="e#6#1612#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/design/byob_generate_css.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
+        <state relative-caret-position="16065">
           <caret line="765" column="80" lean-forward="true" selection-start-line="765" selection-start-column="80" selection-end-line="765" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/byob_widget_classes.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26901">
+          <caret line="1310" column="48" selection-start-line="1310" selection-start-column="31" selection-end-line="1310" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/design/byob_generate_css.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="942">
+          <caret line="768" column="71" lean-forward="true" selection-start-line="768" selection-start-column="71" selection-end-line="768" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_featured_image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/boxes/byobagn_post_meta_definitions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#code#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/box.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="555" column="25" lean-forward="true" selection-start-line="555" selection-start-column="25" selection-end-line="555" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#68#72#0" expanded="true" />
+            <element signature="e#127#131#0" expanded="true" />
+            <element signature="e#136#140#0" expanded="true" />
+            <element signature="e#111#115#0" expanded="true" />
+            <element signature="e#143#147#0" expanded="true" />
+            <element signature="e#169#173#0" expanded="true" />
+            <element signature="e#178#182#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -82,6 +82,7 @@ class byobagn_featured_image {
                 $attr = array(
                         'class' => "attachment-$size align$alignment$class",
                         'title' => $title,
+                        'itemprop' => !empty($schema) ? 'image' : false,
                         'alt' => trim(strip_tags(get_post_meta($attachment_id, '_wp_attachment_image_alt', true))));
 
 //		var_dump($title);

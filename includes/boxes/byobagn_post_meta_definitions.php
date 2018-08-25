@@ -29,6 +29,14 @@ function byobagn_page_details_metaboxes() {
 	) );
 
 	$cmb->add_field( array(
+			'name' => __( 'Page Subtitle', 'byobagn' ),
+			'desc' => __( 'Enter a Subtitle to be along with the page title', 'byobagn' ),
+			'id'   => $prefix . 'subtitle',
+			'type' => 'text'
+		)
+	);
+
+	$cmb->add_field( array(
 			'name'    => __( 'Page Schema', 'byobagn' ),
 			'desc'    => __( 'Choose the schema from the list', 'byobagn' ),
 			'id'      => $prefix . 'post_schema',
@@ -77,6 +85,14 @@ function byobagn_page_details_metaboxes() {
 			'options' => array(
 				'on' => __( 'Add Responsive Page Specific Banner to this page', 'byobagn' ),
 			)
+		)
+	);
+
+	$cmb->add_field( array(
+			'name' => __( 'Banner Text', 'byobagn' ),
+			'desc' => __( 'Enter text to be included with the banner image', 'byobagn' ),
+			'id'   => $prefix . 'banner_text',
+			'type' => 'text'
 		)
 	);
 }
